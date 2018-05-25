@@ -35,13 +35,13 @@ variables:
     <hr>
 
     {%
-      include meta.html
+      include elements/meta.html
       colors=true
       sizes=true
       variables=true
     %}
 
-    {% include heading.html name="Documentation" %}
+    {% include elements/anchor.html name="Documentation" %}
 
     <div class="content">
       <p>
@@ -73,14 +73,18 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
       {{steps_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+        {% highlight html %}
+        {{steps_example}}
+        {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_example}}
-    {% endhighlight %}
 
-    {% include heading.html name="Marker Content" %}
+    {% include elements/anchor.html name="Marker Content" %}
 
     <div class="content">
       <p>
@@ -112,14 +116,18 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_marker_content_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_marker_content_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_marker_content_example}}
-    {% endhighlight %}
 
-    {% include heading.html name="Step Content" %}
+    {% include elements/anchor.html name="Step Content" %}
 
     <div class="content">
       <p>
@@ -171,12 +179,16 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_content_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_content_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_content_example}}
-    {% endhighlight %}
 
     <div class="content">
       <p>
@@ -228,12 +240,16 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
-      {{steps_centered_content_example}}
-    </div>
-    {% highlight html %}
-    {{steps_centered_content_example}}
-    {% endhighlight %}
+      <div class="bd-snippet">
+        <div class="bd-snippet-preview">
+          {{steps_centered_content_example}}
+        </div>
+        <div class="bd-snippet-code highlight-full">
+        {% highlight html %}
+        {{steps_centered_content_example}}
+        {% endhighlight %}
+        </div>
+      </div>
 
     <div class="content">
       <p>
@@ -277,14 +293,18 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_divider_content_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_divider_content_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_divider_content_example}}
-    {% endhighlight %}
 
-    {% include heading.html name="Colors" %}
+    {% include elements/anchor.html name="Colors" %}
 
     <div class="content">
       <p>
@@ -358,24 +378,36 @@ variables:
 
     <div class="columns">
       <div class="column">
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_marker_colors1_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_marker_colors1_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_marker_colors1_example}}
-        {% endhighlight %}
+
       </div>
       <div class="column">
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_marker_colors2_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_marker_colors2_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_marker_colors2_example}}
-        {% endhighlight %}
+
       </div>
     </div>
 
-    {% include heading.html name="Sizes" %}
+    {% include elements/anchor.html name="Sizes" %}
 
     <div class="content">
       <p>
@@ -461,12 +493,16 @@ variables:
     <ul class="steps is-large">...</ul>
     {% endcapture %}
 
-    <div class="example">
-      {{steps_sizes_example}}
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_sizes_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
+      {{steps_sizes_short_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_sizes_short_example}}
-    {% endhighlight %}
 
     <div class="content">
       <p>
@@ -496,18 +532,22 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_thin_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_thin_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_thin_example}}
-    {% endhighlight %}
 
-    {% include heading.html name="Narrow" %}
+    {% include elements/anchor.html name="Narrow" %}
 
     <div class="content">
       <p>
-        By default, the <code>steps</code> component will take up the entire width. Add the <code>is-narrow</code> modifier to only take up as much space as needed.
+        By default, the <code>steps</code> component will take up the entire width or height. Add the <code>is-narrow</code> or <code>is-short</code> modifier to only take up as much space as needed.
       </p>
 
       <p>
@@ -553,14 +593,18 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_narrow_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_narrow_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_narrow_example}}
-    {% endhighlight %}
 
-    {% include heading.html name="Marker Style" %}
+    {% include elements/anchor.html name="Marker Style" %}
 
     <div class="content">
       <p>
@@ -599,27 +643,39 @@ variables:
     <div class="columns">
       <div class="column">
         <h4 class="title">For all steps</h4>
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_hollow_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_hollow_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_hollow_example}}
-        {% endhighlight %}
+
       </div>
 
       <div class="column">
         <h4 class="title">Per step</h4>
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_hollow_mixed_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_hollow_mixed_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_hollow_mixed_example}}
-        {% endhighlight %}
+
       </div>
     </div>
 
 
-    {% include heading.html name="Divider Styles" %}
+    {% include elements/anchor.html name="Divider Styles" %}
 
     <div class="content">
       <p>
@@ -651,7 +707,7 @@ variables:
       <li class="steps-segment is-active is-dashed">
         <span class="steps-marker"></span>
         <div class="steps-content is-divider-content">
-          <p class="heading">Next step unreachable until some action has been taken</p>
+          <p class="heading">Next step unreachable</p>
         </div>
       </li>
       <li class="steps-segment">
@@ -663,22 +719,34 @@ variables:
     <div class="columns">
       <div class="column">
         <h4 class="title">For all steps</h4>
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_dashed_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_dashed_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_dashed_example}}
-        {% endhighlight %}
+
       </div>
 
       <div class="column">
         <h4 class="title">Per step</h4>
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_dashed_mixed_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_dashed_mixed_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_dashed_mixed_example}}
-        {% endhighlight %}
+
       </div>
     </div>
 
@@ -717,26 +785,38 @@ variables:
     <div class="columns">
       <div class="column">
         <h4 class="title">For all steps</h4>
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_gaps_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_gaps_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_gaps_example}}
-        {% endhighlight %}
+
       </div>
 
       <div class="column">
         <h4 class="title">Per step</h4>
-        <div class="example">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_gaps_mixed_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
           {{steps_gaps_mixed_example}}
+          {% endhighlight %}
+          </div>
         </div>
-        {% highlight html %}
-        {{steps_gaps_mixed_example}}
-        {% endhighlight %}
+
       </div>
     </div>
 
-    {% include heading.html name="Alignment" %}
+    {% include elements/anchor.html name="Alignment" %}
 
     <div class="content">
       <p>
@@ -809,29 +889,32 @@ variables:
     {% endcapture %}
 
     <h4 class="title">Always horizontal</h4>
-    <div class="example">
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_horizontal_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_horizontal_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_horizontal_example}}
-    {% endhighlight %}
 
     <h4 class="title">Always vertical</h4>
 
-    <div class="columns">
-      <div class="column">
+    <div class="bd-snippet bd-is-vertical">
+      <div class="bd-snippet-preview">
+        {{steps_vertical_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
         {% highlight html %}
         {{steps_vertical_example}}
         {% endhighlight %}
       </div>
-      <div class="column">
-        <div class="example">
-          {{steps_vertical_example}}
-        </div>
-      </div>
     </div>
 
-    {% include heading.html name="Example" %}
+    {% include elements/anchor.html name="Example" %}
 
     <div class="content">
       <p>
@@ -854,7 +937,7 @@ variables:
         </a>
       </li>
       <li class="steps-segment">
-        <a hef=#" class="has-text-dark">
+        <a href="#" class="has-text-dark">
           <span class="steps-marker">
             <span class="icon">
               <i class="fa fa-user"></i>
@@ -888,14 +971,18 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_checkout_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_checkout_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_checkout_example}}
-    {% endhighlight %}
 
-    {% include heading.html name="SASS Mixin Helpers" %}
+    {% include elements/anchor.html name="SASS Mixin Helpers" %}
 
     <div class="content">
       <p>
@@ -963,12 +1050,16 @@ variables:
     </ul>
     {% endcapture %}
 
-    <div class="example">
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_custom_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
       {{steps_custom_example}}
+      {% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}
-    {{steps_custom_example}}
-    {% endhighlight %}
 
     <div class="content">
       <p>
@@ -979,9 +1070,9 @@ variables:
       </p>
     </div>
 
-    {% include variables.html %}
+    {% include elements/variables.html %}
 
-    {% include heading.html name="Problems?" %}
+    {% include elements/anchor.html name="Problems?" %}
 
     <div class="content">
       <p>

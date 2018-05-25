@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201805241550">
+    <link rel="stylesheet" href="documentation.css">
+
+    <title>Steps Component for Bulma.io</title>
+  </head>
+
+  <body>
+    <section class="hero is-primary is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column title-col">
+              <h1 class="title">
+                Steps Component For <a href="http://bulma.io">Bulma.io</a>
+              </h1>
+              <h2 class="subtitle">
+                Keep track of where you are in multi steps forms and wizards
+              </h2>
+            </div>
+
+            <div class="column">
+              <div class="bd-snippet bd-is-horizontal bd-is-3">
+                <div class="bd-snippet-preview">
+                  <ul class="steps is-medium">
+                    <li class="steps-segment is-completed">
+                      <a href="#" class="has-text-dark">
+                        <span class="steps-marker">
+                          <span class="icon">
+                            <i class="fa fa-shopping-cart"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="steps-segment is-completed">
+                      <a href="#" class="has-text-dark">
+                        <span class="steps-marker">
+                          <span class="icon">
+                            <i class="fa fa-user"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="steps-segment is-active has-gaps">
+                      <span class="steps-marker">
+                        <span class="icon">
+                          <i class="fa fa-usd"></i>
+                        </span>
+                      </span>
+                    </li>
+                    <li class="steps-segment">
+                      <span class="steps-marker">
+                        <span class="icon">
+                          <i class="fa fa-check"></i>
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+  <div class="container">
+    <h1 class="title">Installation</h1>
+    <p>
+      An extension for the <a href="http://bulma.io">Bulma CSS framework</a>. See the <a href="https://github.com/octoshrimpy/bulma-o-steps">Readme on Github</a> for installation instructions.
+    </p>
+
+    <hr />
+
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+  
+
+  
+
+  
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+      
+        <a class="tag is-success" href="#colors">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+      
+        <a class="tag is-success" href="#sizes">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+      
+        <a class="tag is-success" href="#variables">Yes</a>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="documentation" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Documentation
+  </span>
+  <a class="bd-anchor-link" href="#documentation">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        The <code>steps</code> list is useful for tracking progress in multi steps forms or wizards.
+      </p>
+
+      <p>
+        You can use the <code>is-active</code> modifier to set the current active step. Any step before or after the active step will be styled differently.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+      
+    <ul class="steps">
+      <li class="steps-segment">
+        <a href="#" class="steps-marker"></a>
+      </li>
+      <li class="steps-segment">
+        <a href="#" class="steps-marker"></a>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+        
+<figure class="highlight"><pre><code class="language-html" data-lang="html">        
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+        </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="marker-content" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Marker Content
+  </span>
+  <a class="bd-anchor-link" href="#marker-content">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        You can display information inside markers. About 2 or 3 characters or an <code>icon</code> will fit.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps">
+      <li class="steps-segment">
+        <span class="steps-marker">1</span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker">xyz</span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker">-3-</span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker">★</span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>xyz<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>-3-<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>★<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="step-content" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Step Content
+  </span>
+  <a class="bd-anchor-link" href="#step-content">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        Use the <code>steps-content</code> class to add content to a <code>steps-segment</code>.
+      </p>
+
+      <p>
+        If the last step also has content, use the <code>is-balanced</code> modifier on the root <code>steps</code> element, to make sure that the last step has the same width as the other steps.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-balanced">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 1</p>
+          <p>This is the first step, which means you start here.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 2</p>
+          <p>This is the second step. Once you complete the first step, you will end up here.</p>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 3</p>
+          <p>This is the third step. This is halfway between the start and the end.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 4</p>
+          <p>The fourth step. Nearly there!</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 5</p>
+          <p>And finally the last step. You have successfully completed all 5 steps.</p>
+        </div>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-balanced"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the first step, which means you start here.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the second step. Once you complete the first step, you will end up here.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the third step. This is halfway between the start and the end.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>The fourth step. Nearly there!<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 5<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>And finally the last step. You have successfully completed all 5 steps.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        Use the <code>has-content-centered</code> class to align the content directly underneath the marker.
+      </p>
+
+      <p>
+        You can omit the <code>is-balanced</code> modifier, since <code>has-content-centered</code> will make sure the steps are always balanced.
+      </p>
+    </div>
+
+    
+
+      <div class="bd-snippet">
+        <div class="bd-snippet-preview">
+          
+    <ul class="steps has-content-centered">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 1</p>
+          <p>This is the first step, which means you start here.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 2</p>
+          <p>This is the second step. Once you complete the first step, you will end up here.</p>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 3</p>
+          <p>This is the third step. This is halfway between the start and the end.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 4</p>
+          <p>The fourth step. Nearly there!</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 5</p>
+          <p>And finally the last step. You have successfully completed all 5 steps.</p>
+        </div>
+      </li>
+    </ul>
+    
+        </div>
+        <div class="bd-snippet-code highlight-full">
+        
+<figure class="highlight"><pre><code class="language-html" data-lang="html">        
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-content-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the first step, which means you start here.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the second step. Once you complete the first step, you will end up here.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the third step. This is halfway between the start and the end.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>The fourth step. Nearly there!<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 5<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>And finally the last step. You have successfully completed all 5 steps.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+        </code></pre></figure>
+
+        </div>
+      </div>
+
+    <div class="content">
+      <p>
+        Use the <code>is-divider-content</code> modifier to align content with the divider.
+      </p>
+
+      <p>
+        If the last step has no content, omit the <code>is-balanced</code> modifier on the root element to make sure the last step stays flush with the right edge.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content is-divider-content">
+          <p class="is-size-4">Action 1</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content is-divider-content">
+          <p class="is-size-4">Action 2</p>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+        <div class="steps-content is-divider-content">
+          <p class="is-size-4">Action 3</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content is-divider-content">
+          <p class="is-size-4">Action 4</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Action 1<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Action 2<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Action 3<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Action 4<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="colors" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Colors
+  </span>
+  <a class="bd-anchor-link" href="#colors">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        Every marker can have a different color. This can be used to indicate steps with errors, for example.
+      </p>
+    </div>
+
+    
+
+    
+
+    <div class="columns">
+      <div class="column">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps has-content-centered">
+      <li class="steps-segment">
+        <span class="steps-marker is-white">1</span>
+        <div class="steps-content">
+          <code>is-white</code>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-light">2</span>
+        <div class="steps-content">
+          <code>is-light</code>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker is-dark">3</span>
+        <div class="steps-content">
+          <code>is-dark</code>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-black">4</span>
+        <div class="steps-content">
+          <code>is-black</code>
+        </div>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-content-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-white"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-white<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-light"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-light<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-dark"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-dark<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-black"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-black<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps has-content-centered">
+      <li class="steps-segment">
+        <span class="steps-marker is-primary">1</span>
+        <div class="steps-content">
+          <code>is-primary</code>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-info">2</span>
+        <div class="steps-content">
+          <code>is-info</code>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker is-success">3</span>
+        <div class="steps-content">
+          <code>is-success</code>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-warning">4</span>
+        <div class="steps-content">
+          <code>is-warning</code>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-danger">5</span>
+        <div class="steps-content">
+          <code>is-danger</code>
+        </div>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-content-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-primary"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-primary<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-info"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-info<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-success"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-success<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-warning"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-warning<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-danger"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;code&gt;</span>is-danger<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="sizes" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Sizes
+  </span>
+  <a class="bd-anchor-link" href="#sizes">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        You can use the <code>is-small</code>, <code>is-medium</code> or <code>is-large</code> modifiers to change the size.
+      </p>
+    </div>
+
+    
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-small">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    <ul class="steps">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    <ul class="steps is-medium">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    <ul class="steps is-large">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-small"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-medium"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-large"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        Or if you want to go really small, use the <code>is-thin</code> modifier to have 1px wide
+        dividers. The markers will also be made smaller, so you can't put anything inside them
+        anymore.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-thin">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-thin"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="narrow" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Narrow
+  </span>
+  <a class="bd-anchor-link" href="#narrow">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        By default, the <code>steps</code> component will take up the entire width or height. Add the <code>is-narrow</code> or <code>is-short</code> modifier to only take up as much space as needed.
+      </p>
+
+      <p>
+        You can combine that with the <code>is-centered</code> or <code>is-right</code> modifiers to change the alignment.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-narrow">
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+
+    <ul class="steps is-narrow is-centered">
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+
+    <ul class="steps is-narrow is-right">
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-narrow"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-narrow is-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-narrow is-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="marker-style" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Marker Style
+  </span>
+  <a class="bd-anchor-link" href="#marker-style">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        The marker can be styled using the <code>is-hollow</code> modifier. It can apply to all steps by defining it on the root <code>steps</code> element or each marker separately.
+      </p>
+    </div>
+
+    
+
+    
+
+    <div class="columns">
+      <div class="column">
+        <h4 class="title">For all steps</h4>
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps is-hollow">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-hollow"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <h4 class="title">Per step</h4>
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps">
+      <li class="steps-segment">
+        <span class="steps-marker is-hollow"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-hollow"></span>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-hollow"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-hollow"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="divider-styles" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Divider Styles
+  </span>
+  <a class="bd-anchor-link" href="#divider-styles">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        The divider can be styled using the <code>is-dashed</code> modifier, <code>has-gaps</code> modifier or both. They can apply to all steps by defining it on the root <code>steps</code> element or each step separately.
+      </p>
+
+      <h4 class="title"><code>is-dashed</code></h4>
+    </div>
+
+    
+
+    
+
+    <div class="columns">
+      <div class="column">
+        <h4 class="title">For all steps</h4>
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps is-dashed">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-dashed"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <h4 class="title">Per step</h4>
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active is-dashed">
+        <span class="steps-marker"></span>
+        <div class="steps-content is-divider-content">
+          <p class="heading">Next step unreachable</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active is-dashed"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Next step unreachable<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content">
+      <h4 class="title"><code>has-gaps</code></h4>
+    </div>
+
+    
+
+    
+
+    <div class="columns">
+      <div class="column">
+        <h4 class="title">For all steps</h4>
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps has-gaps">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-gaps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <h4 class="title">Per step</h4>
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+    <ul class="steps">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active has-gaps">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          
+<figure class="highlight"><pre><code class="language-html" data-lang="html">          
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active has-gaps"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+          </code></pre></figure>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="alignment" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Alignment
+  </span>
+  <a class="bd-anchor-link" href="#alignment">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        The steps are displayed vertically on mobile and horizontally on bigger sizes by default.
+      </p>
+
+      <p>
+        You can use the <code>is-horizontal</code> or <code>is-vertical</code> modifiers to always force the steps in a certain alignment no matter the screen size.
+      </p>
+    </div>
+
+    
+
+    
+
+    <h4 class="title">Always horizontal</h4>
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-horizontal">
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-horizontal"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <h4 class="title">Always vertical</h4>
+
+    <div class="bd-snippet bd-is-vertical">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-vertical">
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">2000</p>
+          <p>Lorem Ipsum Dolor Sit Amet</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span href="#" class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">2002</p>
+          <p>Maecenas Ultrices Aliquet Velit Vitae</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">2007</p>
+          <p>Aliquam Quis Scelerisque Mauris Nullam</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">2012</p>
+          <p>Etiam A Nunc Vitae Nunc</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">2017</p>
+          <p>In Sed Vehicula Est Vivamus</p>
+        </div>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+        
+<figure class="highlight"><pre><code class="language-html" data-lang="html">        
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-vertical"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>Lorem Ipsum Dolor Sit Amet<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>2002<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>Maecenas Ultrices Aliquet Velit Vitae<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>Aliquam Quis Scelerisque Mauris Nullam<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>Etiam A Nunc Vitae Nunc<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>In Sed Vehicula Est Vivamus<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+        </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="example" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Example
+  </span>
+  <a class="bd-anchor-link" href="#example">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        Putting things together, we can make a checkout form for a shopping website.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-narrow is-medium is-centered has-content-centered">
+      <li class="steps-segment">
+        <a href="#" class="has-text-dark">
+          <span class="steps-marker">
+            <span class="icon">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+          </span>
+          <div class="steps-content">
+            <p class="heading">Shopping Cart</p>
+          </div>
+        </a>
+      </li>
+      <li class="steps-segment">
+        <a href="#" class="has-text-dark">
+          <span class="steps-marker">
+            <span class="icon">
+              <i class="fa fa-user"></i>
+            </span>
+          </span>
+          <div class="steps-content">
+            <p class="heading">User Information</p>
+          </div>
+        </a>
+      </li>
+      <li class="steps-segment is-active has-gaps">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fa fa-usd"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Payment</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker is-hollow">
+          <span class="icon">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Confirmation</p>
+        </div>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-narrow is-medium is-centered has-content-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"has-text-dark"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-shopping-cart"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Shopping Cart<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"has-text-dark"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-user"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>User Information<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active has-gaps"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-usd"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Payment<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker is-hollow"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Confirmation<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="sass-mixin-helpers" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    SASS Mixin Helpers
+  </span>
+  <a class="bd-anchor-link" href="#sass-mixin-helpers">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        There are a few helpers available to make it easy to directly target step segments if you
+        want to create custom step styles. They are <code>steps-all-segments</code>,
+        <code>steps-inactive-segments</code> and <code>steps-active-segment</code>.
+      </p>
+
+      <p>
+        For example, if you create a <code>my-step-style</code> class in a .sass file like this:
+      </p>
+    </div>
+
+    
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass">      <span class="c1">// in a .sass file</span>
+      <span class="nc">.my-step-style</span>
+        <span class="nd">+steps-active-segment</span>
+          <span class="nc">.steps-content</span>
+            <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span>
+
+        <span class="nd">+steps-inactive-segments</span>
+          <span class="nc">.steps-content</span>
+            <span class="nl">color</span><span class="p">:</span> <span class="nv">$grey-lighter</span>
+    </code></pre></figure>
+
+
+    <div class="content">
+      <p>
+        Then using the <code>my-step-style</code> class on the root steps element will add the
+        custom styles.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps my-step-style has-content-centered">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-5">Step 1</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-5">Step 2</p>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-5">Step 3</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-5">Step 4</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-5">Step 5</p>
+        </div>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps my-step-style has-content-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-5"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-5"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-5"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-5"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-5"</span><span class="nt">&gt;</span>Step 5<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        There is no <code>steps-completed-segments</code> mixin available, due to the way the code
+        is structured (and css3 limitations). If you want to target those, use the
+        <code>steps-all-segments</code> mixin to set that style and override it with the
+        <code>steps-active-segment</code> and <code>steps-inactive-segments</code> mixins.
+      </p>
+    </div>
+
+    
+
+<hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Variables
+  </span>
+  <a class="bd-anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>You can use these variables to <strong>customize</strong> this . Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="http://localhost:4000/documentation/overview/customize/">Learn how</a>.</p>
+</div>
+
+<div class="table-container">
+  <table class="table is-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Default value</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Name</th>
+        <th>Default value</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+
+
+    <hr class="hr" style="margin-bottom: 0;" />
+
+<h3 id="problems" class="title is-4 is-spaced bd-anchor-title">
+  <span class="bd-anchor-name">
+    Problems?
+  </span>
+  <a class="bd-anchor-link" href="#problems">
+    #
+  </a>
+</h3>
+
+
+    <div class="content">
+      <p>
+        Is some combinations of modifers giving you problems or look wrong? Please <a href="https://github.com/aramvisser/bulma-steps/issues/new">create an issue on Github</a>
+        and I will take a look at it.
+      </p>
+    </div>
+  </div>
+</section>
+
+  </body>
+</html>

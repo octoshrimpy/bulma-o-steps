@@ -1,0 +1,25 @@
+---
+---
+@charset "utf-8"
+@import 'node_modules/bulma/bulma.sass'
+@import 'bulma-steps.sass'
+
+.title-col
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.hero .bd-snippet
+  background-color: $white
+
+.my-step-style
+  +steps-active-segment
+    .steps-content
+      font-weight: bold
+
+  +steps-inactive-segments
+    .steps-content
+      color: $grey-lighter
+
+.bd-snippet-code.highlight-full pre
+  padding: 0

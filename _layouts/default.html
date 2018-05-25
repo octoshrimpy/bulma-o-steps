@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ site.fontawesome }}">
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201805241550">
+    <link rel="stylesheet" href="documentation.css">
+
+    <title>Steps Component for Bulma.io</title>
+  </head>
+
+  <body>
+    <section class="hero is-primary is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column title-col">
+              <h1 class="title">
+                Steps Component For <a href="http://bulma.io">Bulma.io</a>
+              </h1>
+              <h2 class="subtitle">
+                Keep track of where you are in multi steps forms and wizards
+              </h2>
+            </div>
+
+            <div class="column">
+              <div class="bd-snippet bd-is-horizontal bd-is-3">
+                <div class="bd-snippet-preview">
+                  <ul class="steps is-medium">
+                    <li class="steps-segment is-completed">
+                      <a href="#" class="has-text-dark">
+                        <span class="steps-marker">
+                          <span class="icon">
+                            <i class="fa fa-shopping-cart"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="steps-segment is-completed">
+                      <a href="#" class="has-text-dark">
+                        <span class="steps-marker">
+                          <span class="icon">
+                            <i class="fa fa-user"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="steps-segment is-active has-gaps">
+                      <span class="steps-marker">
+                        <span class="icon">
+                          <i class="fa fa-usd"></i>
+                        </span>
+                      </span>
+                    </li>
+                    <li class="steps-segment">
+                      <span class="steps-marker">
+                        <span class="icon">
+                          <i class="fa fa-check"></i>
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ content }}
+  </body>
+</html>
