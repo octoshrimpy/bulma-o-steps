@@ -1,7 +1,8 @@
 # Steps component for Bulma
 
-This is an extensions for the [Bulma CSS Framework](http://bulma.io). It adds a `steps` component to
-track progress in multi step forms or wizards.
+This is an extension for the [Bulma CSS Framework](http://bulma.io).  
+
+It adds a `steps` component to track progress in multi-step forms or wizards.  
 Original written by [aramvisser](https://github.com/aramvisser) over at [his original repo](https://aramvisser.github.io/bulma-steps)
 
 [![Steps example for a checkout form](steps-example.png)](https://octoshrimpy.github.io/bulma-o-steps)
@@ -10,8 +11,8 @@ Original written by [aramvisser](https://github.com/aramvisser) over at [his ori
 
 [Usage & Examples](https://octoshrimpy.github.io/bulma-o-steps)
 
-I'm trying to keep this working with the latest available Bulma version. Currently tracking: **bulma
-v0.7.1**. Other versions _should_ work, but no promises.
+I'm trying to keep this working with the latest available Bulma version.     
+Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promises.
 
 ## Installation
 
@@ -30,7 +31,7 @@ Bulma in your current workflow
 
 ## Development
 
-This repository doubles as the documentation page using Jekyll. You can easily see changes in the
+This repository doubles as the documentation page using Jekyll. You can see changes in the
 documentation by running Jekyll locally.
 
 - Install ruby and then install Jekyll with `gem install jekyll`

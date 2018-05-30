@@ -1,3 +1,6 @@
 .sass-cache/
 *.css.map
 node_modules
+bulma-o-steps*.tgz
+
+npm-debug\.log

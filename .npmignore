@@ -1,0 +1,11 @@
+_includes/
+_layouts/
+_site/
+.sass-cache/
+styles/
+_config.yml
+.gitignore
+documentation.sass
+index.html
+steps-example.png
+*.css.map
