@@ -22,12 +22,21 @@ Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promi
 
 ### Manually
 
-There is no .css file available, only a .sass file. Make sure you are using the SASS version of
-Bulma in your current workflow
-
+#### SASS
 - Download the `bulma-steps.sass` file
 - Add `@import "bulma-steps.sass"` _after_ the `@import "bulma.sass"` statement in your own
   stylesheet
+
+#### CSS
+- Download the `bulma.steps.css` file
+- Add `@import "bulma-steps.css"`_after_ the `@import "bulma.css"` statement in your own
+  stylesheet   
+
+#### Hosted Online
+Alternatively, you can include bulma and bulma-steps from a CDN.   
+As of writing, these are the current CDNs for both:
+- bulma      : https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css
+- bulma-steps: https://cdn.rawgit.com/octoshrimpy/bulma-o-steps/master/bulma-steps.css
 
 ## Development
 
