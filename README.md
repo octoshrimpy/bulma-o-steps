@@ -18,7 +18,7 @@ Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promi
 
 ### NPM
 
-`npm install bulma-steps-component`
+`npm install bulma-o-steps`
 
 ### Manually
 
