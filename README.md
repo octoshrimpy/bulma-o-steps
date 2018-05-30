@@ -29,7 +29,7 @@ Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promi
 
 #### CSS
 - Download the `bulma.steps.css` file
-- Add `@import "bulma-steps.css"`_after_ the `@import "bulma.css"` statement in your own
+- Add `@import "bulma-steps.css"` _after_ the `@import "bulma.css"` statement in your own
   stylesheet   
 
 #### Hosted Online
