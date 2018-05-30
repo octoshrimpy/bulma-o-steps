@@ -6,6 +6,14 @@
 .steps:not(:last-child) {
   margin-bottom: 1.5rem; }
 
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+.steps:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
 .steps .steps-segment {
   position: relative; }
   .steps .steps-segment:not(:last-child):after {
