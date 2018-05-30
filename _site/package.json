@@ -1,6 +1,6 @@
 {
   "name": "bulma-o-steps",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "In-depth Steps component for Bulma.io",
   "main": "bulma-o-steps.sass",
   "scripts": {

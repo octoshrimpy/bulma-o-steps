@@ -118,6 +118,9 @@ $steps-thin-marker-size: .8em !default
 
   +steps-vertical
     // Draw a vertical divider
+    display: flex
+    flex-direction: column
+
     .steps-segment:not(:last-child):after
       // top and bottom position is almost touching the inner side of a hollow border marker
       bottom: -$steps-gap-size * 0.8
@@ -145,6 +148,13 @@ $steps-thin-marker-size: .8em !default
         &:not(:last-child):after
           top: ($size * $steps-marker-size) + $steps-gap-size
           bottom:  $steps-gap-size
+
+    &.is-short
+      &.is-centered
+        align-items: center
+
+      &.is-bottom
+        align-items: flex-end
 
   +steps-horizontal
     // Draw a horizontal divider
