@@ -158,6 +158,9 @@
       left: 1.76rem;
       right: -0.24rem;
       top: calc(1rem - (0.2em)); }
+    .steps:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
+      bottom: calc(1rem - (0.2em));
+      top: auto; }
     .steps:not(.is-vertical) .steps-content {
       margin-left: 1rem; }
       .steps:not(.is-vertical) .steps-content:not(:last-child) {
@@ -191,6 +194,9 @@
     left: 1.76rem;
     right: -0.24rem;
     top: calc(1rem - (0.2em)); }
+  .steps.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
+    bottom: calc(1rem - (0.2em));
+    top: auto; }
   .steps.is-horizontal .steps-content {
     margin-left: 1rem; }
     .steps.is-horizontal .steps-content:not(:last-child) {
@@ -283,6 +289,9 @@
       left: 1.26rem;
       right: -0.24rem;
       top: calc(0.75rem - (0.2em)); }
+    .steps.is-small:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
+      bottom: calc(0.75rem - (0.2em));
+      top: auto; }
     .steps.is-small:not(.is-vertical) .steps-content {
       margin-left: 0.75rem; }
       .steps.is-small:not(.is-vertical) .steps-content:not(:last-child) {
@@ -316,6 +325,9 @@
     left: 1.26rem;
     right: -0.24rem;
     top: calc(0.75rem - (0.2em)); }
+  .steps.is-small.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
+    bottom: calc(0.75rem - (0.2em));
+    top: auto; }
   .steps.is-small.is-horizontal .steps-content {
     margin-left: 0.75rem; }
     .steps.is-small.is-horizontal .steps-content:not(:last-child) {
@@ -408,6 +420,9 @@
       left: 2.26rem;
       right: -0.24rem;
       top: calc(1.25rem - (0.2em)); }
+    .steps.is-medium:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
+      bottom: calc(1.25rem - (0.2em));
+      top: auto; }
     .steps.is-medium:not(.is-vertical) .steps-content {
       margin-left: 1.25rem; }
       .steps.is-medium:not(.is-vertical) .steps-content:not(:last-child) {
@@ -441,6 +456,9 @@
     left: 2.26rem;
     right: -0.24rem;
     top: calc(1.25rem - (0.2em)); }
+  .steps.is-medium.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
+    bottom: calc(1.25rem - (0.2em));
+    top: auto; }
   .steps.is-medium.is-horizontal .steps-content {
     margin-left: 1.25rem; }
     .steps.is-medium.is-horizontal .steps-content:not(:last-child) {
@@ -533,6 +551,9 @@
       left: 2.76rem;
       right: -0.24rem;
       top: calc(1.5rem - (0.2em)); }
+    .steps.is-large:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
+      bottom: calc(1.5rem - (0.2em));
+      top: auto; }
     .steps.is-large:not(.is-vertical) .steps-content {
       margin-left: 1.5rem; }
       .steps.is-large:not(.is-vertical) .steps-content:not(:last-child) {
@@ -566,6 +587,9 @@
     left: 2.76rem;
     right: -0.24rem;
     top: calc(1.5rem - (0.2em)); }
+  .steps.is-large.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
+    bottom: calc(1.5rem - (0.2em));
+    top: auto; }
   .steps.is-large.is-horizontal .steps-content {
     margin-left: 1.5rem; }
     .steps.is-large.is-horizontal .steps-content:not(:last-child) {
@@ -774,6 +798,9 @@
     right: 0;
     top: calc(0.4em - 0.5px);
     height: 1px; }
+  .steps.is-thin:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
+    bottom: calc(0.4em - 0.5px);
+    top: auto; }
   .steps.is-thin:not(.is-vertical) .steps-content {
     margin-top: 0.8em; }
   .steps.is-thin:not(.is-vertical).has-content-centered .steps-segment:not(:last-child):after {
@@ -793,6 +820,9 @@
   right: 0;
   top: calc(0.4em - 0.5px);
   height: 1px; }
+.steps.is-thin.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
+  bottom: calc(0.4em - 0.5px);
+  top: auto; }
 .steps.is-thin.is-horizontal .steps-content {
   margin-top: 0.8em; }
 .steps.is-thin.is-horizontal.has-content-centered .steps-segment:not(:last-child):after {
@@ -816,9 +846,6 @@
     padding-top: 0;
     display: flex;
     flex-direction: column-reverse; }
-  .steps:not(.is-vertical).has-content-above .steps-segment:not(:last-child):after {
-    bottom: calc(0.4em - 0.5px);
-    top: auto; }
 
 .title-col {
   display: flex;
