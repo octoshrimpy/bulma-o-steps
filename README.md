@@ -35,8 +35,7 @@ Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promi
 #### Hosted Online
 Alternatively, you can include bulma and bulma-steps from a CDN.   
 As of writing, these are the current CDNs for both:
-<!-- &nbsp below to indent and align the urls -->
-- bulma&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css
+- bulma: https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css
 - bulma-steps: https://cdn.rawgit.com/octoshrimpy/bulma-o-steps/master/bulma-steps.css
 
 ## Development
