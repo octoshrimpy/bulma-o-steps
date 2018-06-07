@@ -45,8 +45,8 @@
       </tr>
     </tfoot>
     <tbody>
-      {% for variable_hash in variables %}
-        {% assign variable = variable_hash[1] %}
+      {% for variable_hash in page.variables %}
+        {% assign variable = variable_hash %}
         <tr>
           <td >
             <code style="white-space: nowrap;">{{ variable.name }}</code>
