@@ -23,7 +23,7 @@
                 Steps Component For <a href="http://bulma.io">Bulma.io</a>
               </h1>
               <h2 class="subtitle">
-                Keep track of where you are in multi-step forms or wizards
+                An in-depth steps extension for multi-step forms or wizards
               </h2>
             </div>
 
@@ -551,6 +551,196 @@
       </code></pre></figure>
       </div>
     </div>
+
+
+    <div class="content">
+      <p>
+        Use <code>has-content-above</code> modifier to move the steps above the marker.
+      </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        
+    <ul class="steps is-balanced has-content-above">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 1</p>
+          <p>This is the first step, which means you start here.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 2</p>
+          <p>This is the second step. Once you complete the first step, you will end up here.</p>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 3</p>
+          <p>This is the third step. This is halfway between the start and the end.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 4</p>
+          <p>The fourth step. Nearly there!</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 5</p>
+          <p>And finally the last step. You have successfully completed all 5 steps.</p>
+        </div>
+      </li>
+    </ul>
+    
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html">      
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-balanced has-content-above"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the first step, which means you start here.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the second step. Once you complete the first step, you will end up here.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is the third step. This is halfway between the start and the end.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>The fourth step. Nearly there!<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 5<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p&gt;</span>And finally the last step. You have successfully completed all 5 steps.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+      </code></pre></figure>
+      </div>
+    </div>
+
+
+        <div class="content">
+          <p>
+            <code>has-content-above</code> also works with <code>is-divider-content</code>
+          </p>
+        </div>
+
+        
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            
+        <ul class="steps has-content-above">
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 1</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 2</p>
+            </div>
+          </li>
+          <li class="steps-segment is-active">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 3</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 4</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 5</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+          </li>
+        </ul>
+        
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          <figure class="highlight"><pre><code class="language-html" data-lang="html">          
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-content-above"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content is-divider-content"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 5<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+        
+          </code></pre></figure>
+          </div>
+        </div>
+
+
+
+
 
     <hr class="hr" style="margin-bottom: 0;">
 

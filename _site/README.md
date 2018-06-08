@@ -2,7 +2,7 @@
 
 This is an extension for the [Bulma CSS Framework](http://bulma.io).  
 
-It adds a `steps` component to track progress in multi-step forms or wizards.  
+It adds an in-depth `steps` component to track progress in multi-step forms or wizards.  
 Original written by [aramvisser](https://github.com/aramvisser) over at [his original repo](https://aramvisser.github.io/bulma-steps)
 
 [![Steps example for a checkout form](steps-example.png)](https://octoshrimpy.github.io/bulma-o-steps)
