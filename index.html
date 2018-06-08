@@ -304,6 +304,124 @@ variables:
       </div>
     </div>
 
+
+    <div class="content">
+      <p>
+        Use <code>has-content-above</code> modifier to move the steps above the marker.
+      </p>
+    </div>
+
+    {% capture steps_content_above_example %}
+    <ul class="steps is-balanced has-content-above">
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 1</p>
+          <p>This is the first step, which means you start here.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 2</p>
+          <p>This is the second step. Once you complete the first step, you will end up here.</p>
+        </div>
+      </li>
+      <li class="steps-segment is-active">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 3</p>
+          <p>This is the third step. This is halfway between the start and the end.</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 4</p>
+          <p>The fourth step. Nearly there!</p>
+        </div>
+      </li>
+      <li class="steps-segment">
+        <span class="steps-marker"></span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 5</p>
+          <p>And finally the last step. You have successfully completed all 5 steps.</p>
+        </div>
+      </li>
+    </ul>
+    {% endcapture %}
+
+    <div class="bd-snippet">
+      <div class="bd-snippet-preview">
+        {{steps_content_above_example}}
+      </div>
+      <div class="bd-snippet-code highlight-full">
+      {% highlight html %}
+      {{steps_content_above_example}}
+      {% endhighlight %}
+      </div>
+    </div>
+
+
+        <div class="content">
+          <p>
+            <code>has-content-above</code> also works with <code>is-divider-content</code>
+          </p>
+        </div>
+
+        {% capture steps_content_above_divider_example %}
+        <ul class="steps has-content-above">
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 1</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 2</p>
+            </div>
+          </li>
+          <li class="steps-segment is-active">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 3</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 4</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content is-divider-content">
+              <p class="is-size-4">Step 5</p>
+            </div>
+          </li>
+          <li class="steps-segment">
+            <span class="steps-marker"></span>
+          </li>
+        </ul>
+        {% endcapture %}
+
+        <div class="bd-snippet">
+          <div class="bd-snippet-preview">
+            {{steps_content_above_divider_example}}
+          </div>
+          <div class="bd-snippet-code highlight-full">
+          {% highlight html %}
+          {{steps_content_above_divider_example}}
+          {% endhighlight %}
+          </div>
+        </div>
+
+
+
+
+
     {% include anchor.html name="Colors" %}
 
     <div class="content">
