@@ -24,5 +24,8 @@
 .bd-snippet-code.highlight-full pre
   padding: 0
 
-.steps.is-vertical.is-short:not(:first-child)
-  margin-top: -6rem
+.bd-snippet.bd-is-vertical .bd-snippet-preview
+  display: flex
+  flex-direction: row
+  .steps
+    flex-grow: 1
