@@ -171,6 +171,26 @@
     .steps:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
       bottom: calc(1rem - (0.2em));
       top: auto; }
+    .steps:not(.is-vertical) .extra-data {
+      left: calc(50% + 1.3rem);
+      right: calc(-50% + 1.3rem);
+      bottom: 100%;
+      position: absolute; }
+      .steps:not(.is-vertical) .extra-data .has-overflow-right {
+        overflow: visible;
+        right: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps:not(.is-vertical) .extra-data.has-overflow-left {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps:not(.is-vertical) .extra-data.has-overflow-centered {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+    .steps:not(.is-vertical).has-content-above .extra-data {
+      top: 100%;
+      bottom: auto; }
     .steps:not(.is-vertical) .steps-content {
       margin-left: 1rem; }
       .steps:not(.is-vertical) .steps-content:not(:last-child) {
@@ -207,6 +227,26 @@
   .steps.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
     bottom: calc(1rem - (0.2em));
     top: auto; }
+  .steps.is-horizontal .extra-data {
+    left: calc(50% + 1.3rem);
+    right: calc(-50% + 1.3rem);
+    bottom: 100%;
+    position: absolute; }
+    .steps.is-horizontal .extra-data .has-overflow-right {
+      overflow: visible;
+      right: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-horizontal .extra-data.has-overflow-left {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-horizontal .extra-data.has-overflow-centered {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+  .steps.is-horizontal.has-content-above .extra-data {
+    top: 100%;
+    bottom: auto; }
   .steps.is-horizontal .steps-content {
     margin-left: 1rem; }
     .steps.is-horizontal .steps-content:not(:last-child) {
@@ -294,6 +334,26 @@
     .steps.is-small:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
       bottom: calc(0.75rem - (0.2em));
       top: auto; }
+    .steps.is-small:not(.is-vertical) .extra-data {
+      left: calc(50% + 1.05rem);
+      right: calc(-50% + 1.05rem);
+      bottom: 100%;
+      position: absolute; }
+      .steps.is-small:not(.is-vertical) .extra-data .has-overflow-right {
+        overflow: visible;
+        right: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps.is-small:not(.is-vertical) .extra-data.has-overflow-left {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps.is-small:not(.is-vertical) .extra-data.has-overflow-centered {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+    .steps.is-small:not(.is-vertical).has-content-above .extra-data {
+      top: 100%;
+      bottom: auto; }
     .steps.is-small:not(.is-vertical) .steps-content {
       margin-left: 0.75rem; }
       .steps.is-small:not(.is-vertical) .steps-content:not(:last-child) {
@@ -330,6 +390,26 @@
   .steps.is-small.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
     bottom: calc(0.75rem - (0.2em));
     top: auto; }
+  .steps.is-small.is-horizontal .extra-data {
+    left: calc(50% + 1.05rem);
+    right: calc(-50% + 1.05rem);
+    bottom: 100%;
+    position: absolute; }
+    .steps.is-small.is-horizontal .extra-data .has-overflow-right {
+      overflow: visible;
+      right: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-small.is-horizontal .extra-data.has-overflow-left {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-small.is-horizontal .extra-data.has-overflow-centered {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+  .steps.is-small.is-horizontal.has-content-above .extra-data {
+    top: 100%;
+    bottom: auto; }
   .steps.is-small.is-horizontal .steps-content {
     margin-left: 0.75rem; }
     .steps.is-small.is-horizontal .steps-content:not(:last-child) {
@@ -417,6 +497,26 @@
     .steps.is-medium:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
       bottom: calc(1.25rem - (0.2em));
       top: auto; }
+    .steps.is-medium:not(.is-vertical) .extra-data {
+      left: calc(50% + 1.55rem);
+      right: calc(-50% + 1.55rem);
+      bottom: 100%;
+      position: absolute; }
+      .steps.is-medium:not(.is-vertical) .extra-data .has-overflow-right {
+        overflow: visible;
+        right: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps.is-medium:not(.is-vertical) .extra-data.has-overflow-left {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps.is-medium:not(.is-vertical) .extra-data.has-overflow-centered {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+    .steps.is-medium:not(.is-vertical).has-content-above .extra-data {
+      top: 100%;
+      bottom: auto; }
     .steps.is-medium:not(.is-vertical) .steps-content {
       margin-left: 1.25rem; }
       .steps.is-medium:not(.is-vertical) .steps-content:not(:last-child) {
@@ -453,6 +553,26 @@
   .steps.is-medium.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
     bottom: calc(1.25rem - (0.2em));
     top: auto; }
+  .steps.is-medium.is-horizontal .extra-data {
+    left: calc(50% + 1.55rem);
+    right: calc(-50% + 1.55rem);
+    bottom: 100%;
+    position: absolute; }
+    .steps.is-medium.is-horizontal .extra-data .has-overflow-right {
+      overflow: visible;
+      right: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-medium.is-horizontal .extra-data.has-overflow-left {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-medium.is-horizontal .extra-data.has-overflow-centered {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+  .steps.is-medium.is-horizontal.has-content-above .extra-data {
+    top: 100%;
+    bottom: auto; }
   .steps.is-medium.is-horizontal .steps-content {
     margin-left: 1.25rem; }
     .steps.is-medium.is-horizontal .steps-content:not(:last-child) {
@@ -540,6 +660,26 @@
     .steps.is-large:not(.is-vertical).has-content-above .steps-segment:not(:last-child)::after {
       bottom: calc(1.5rem - (0.2em));
       top: auto; }
+    .steps.is-large:not(.is-vertical) .extra-data {
+      left: calc(50% + 1.8rem);
+      right: calc(-50% + 1.8rem);
+      bottom: 100%;
+      position: absolute; }
+      .steps.is-large:not(.is-vertical) .extra-data .has-overflow-right {
+        overflow: visible;
+        right: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps.is-large:not(.is-vertical) .extra-data.has-overflow-left {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+      .steps.is-large:not(.is-vertical) .extra-data.has-overflow-centered {
+        overflow: visible;
+        left: auto;
+        min-width: calc(100% - 1.6em); }
+    .steps.is-large:not(.is-vertical).has-content-above .extra-data {
+      top: 100%;
+      bottom: auto; }
     .steps.is-large:not(.is-vertical) .steps-content {
       margin-left: 1.5rem; }
       .steps.is-large:not(.is-vertical) .steps-content:not(:last-child) {
@@ -576,6 +716,26 @@
   .steps.is-large.is-horizontal.has-content-above .steps-segment:not(:last-child)::after {
     bottom: calc(1.5rem - (0.2em));
     top: auto; }
+  .steps.is-large.is-horizontal .extra-data {
+    left: calc(50% + 1.8rem);
+    right: calc(-50% + 1.8rem);
+    bottom: 100%;
+    position: absolute; }
+    .steps.is-large.is-horizontal .extra-data .has-overflow-right {
+      overflow: visible;
+      right: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-large.is-horizontal .extra-data.has-overflow-left {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+    .steps.is-large.is-horizontal .extra-data.has-overflow-centered {
+      overflow: visible;
+      left: auto;
+      min-width: calc(100% - 1.6em); }
+  .steps.is-large.is-horizontal.has-content-above .extra-data {
+    top: 100%;
+    bottom: auto; }
   .steps.is-large.is-horizontal .steps-content {
     margin-left: 1.5rem; }
     .steps.is-large.is-horizontal .steps-content:not(:last-child) {
