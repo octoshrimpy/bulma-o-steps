@@ -180,6 +180,32 @@ $steps-thin-marker-size: .8em !default
       bottom: calc(#{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}))
       top: auto
 
+    // extra data
+    .extra-data
+      left: calc(50% + #{($size * $steps-marker-size / 2) + $steps-gap-size})
+      right: calc(-50% + #{($size * $steps-marker-size / 2) + $steps-gap-size})
+      bottom: 100%
+      position: absolute
+
+      .has-overflow-right
+        overflow: visible
+        right: auto
+        min-width: calc(100% - 1.6em)
+
+      &.has-overflow-left
+        overflow: visible
+        left: auto
+        min-width: calc(100% - 1.6em)
+
+      &.has-overflow-centered
+        overflow: visible
+        left: auto
+        min-width: calc(100% - 1.6em)
+    &.has-content-above .extra-data
+      top: 100%
+      bottom: auto
+
+
     // Align the content with the marker
     .steps-content
       margin-left: $size * $steps-marker-size / 2

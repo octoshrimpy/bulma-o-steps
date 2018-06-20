@@ -420,6 +420,152 @@ variables:
 
 
 
+        <div class="content">
+          <p>
+            Add a sibling to <code>.steps-content</code> with the class of <code>.extra-data</code> to create between-steps data.
+            It works with <code>.has-content-above</code> as well.
+          </p>
+          <p>Be aware that it is floating and therefore does not occupy space within the DOM. Add margins above and below as needed.</p>
+        </div>
+
+        {% capture steps_centered_content_example %}
+        <div class="columns">
+          <div class="column">
+            <ul class="steps has-content-centered">
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 1</p>
+                </div>
+              </li>
+              <li class="steps-segment is-active">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 2</p>
+                </div>
+                <div class="extra-data">Hello, there.</div>
+              </li>
+              <li class="steps-segment ">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 3</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul class="steps has-content-centered has-content-above">
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 1</p>
+                </div>
+              </li>
+              <li class="steps-segment is-active">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 2</p>
+                </div>
+                <div class="extra-data">General Kenobi!</div>
+              </li>
+              <li class="steps-segment ">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 3</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        {% endcapture %}
+
+          <div class="bd-snippet">
+            <div class="bd-snippet-preview">
+              {{steps_centered_content_example}}
+            </div>
+            <div class="bd-snippet-code highlight-full">
+            {% highlight html %}
+            {{steps_centered_content_example}}
+            {% endhighlight %}
+            </div>
+          </div>
+
+
+        <div class="content">
+          <p>
+            Add a sibling to <code>.steps-content</code> with the class of <code>.extra-data</code> to create between-steps data.
+            It works with <code>.has-content-above</code> as well.
+          </p>
+          <p>Be aware that it is floating and therefore does not occupy space within the DOM. Add margins above and below as needed.</p>
+        </div>
+
+        {% capture steps_centered_content_example %}
+        <div class="columns">
+          <div class="column">
+            <ul class="steps has-content-centered">
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 1</p>
+                </div>
+              </li>
+              <li class="steps-segment is-active">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 2</p>
+                </div>
+                <div class="extra-data">Hello, there.</div>
+              </li>
+              <li class="steps-segment ">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 3</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul class="steps has-content-centered has-content-above">
+              <li class="steps-segment">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 1</p>
+                </div>
+              </li>
+              <li class="steps-segment is-active">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 2</p>
+                </div>
+                <div class="extra-data">General Kenobi!</div>
+              </li>
+              <li class="steps-segment ">
+                <span class="steps-marker"></span>
+                <div class="steps-content">
+                  <p class="is-size-4">Step 3</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        {% endcapture %}
+
+          <div class="bd-snippet">
+            <div class="bd-snippet-preview">
+              {{steps_centered_content_example}}
+            </div>
+            <div class="bd-snippet-code highlight-full">
+            {% highlight html %}
+            {{steps_centered_content_example}}
+            {% endhighlight %}
+            </div>
+          </div>
+
+
 
 
     {% include anchor.html name="Colors" %}
