@@ -28,9 +28,10 @@ Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promi
   stylesheet
 
 #### CSS
-- Download the `bulma.steps.css` file
-- Add `@import "bulma-steps.css"` _after_ the `@import "bulma.css"` statement in your own
+- Download the `bulma-steps.min.css` file
+- Add `@import "bulma-steps.min.css"` _after_ the `@import "bulma.css"` statement in your own
   stylesheet   
+- An expanded version of the file is also available at `bulma-steps.css`
 
 #### Hosted Online
 Alternatively, you can include bulma and bulma-steps from a CDN.   
@@ -44,8 +45,9 @@ This repository doubles as the documentation page using Jekyll. You can see chan
 documentation by running Jekyll locally.
 
 - Install ruby and then install Jekyll with `gem install jekyll`
+- Ruby's eventmachine is broken in windows, you can fix it by uninstalling it with `gem uninstall eventmachine` and reinstalling the proper one with `gem install eventmachine --platform ruby`
 - Clone this repository
-- Run `jekyll serve` inside the root directory of this repository
+- Run `jekyll serve` inside the root directory of this repository. Use ` --livereload` if you'd like to see the changes live.
 - Open the documentation page on [http://localhost:4000](http://localhost:4000)
 - Make changes to the `bulma-steps.sass` file
 - Reload the documentation page to see your changes
