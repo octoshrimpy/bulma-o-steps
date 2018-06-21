@@ -1,6 +1,6 @@
 {
   "name": "bulma-o-steps",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "In-depth Steps component for Bulma.io",
   "main": "bulma-o-steps.sass",
   "scripts": {
@@ -26,8 +26,7 @@
   },
   "homepage": "https://github.com/octoshrimpy/bulma-o-steps#readme",
   "dependencies": {
-    "bulma": "^0.7.1",
-    "npm": "^6.1.0"
+    "bulma": "^0.7.1"
   },
   "devDependencies": {
     "node-sass": "^4.9.0"
