@@ -176,18 +176,21 @@
       right: calc(-50% + 1.3rem);
       bottom: 100%;
       position: absolute; }
-      .steps:not(.is-vertical) .extra-data .has-overflow-right {
+      .steps:not(.is-vertical) .extra-data.has-overflow-right {
         overflow: visible;
         right: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1rem - (0.2em)); }
       .steps:not(.is-vertical) .extra-data.has-overflow-left {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1rem - (0.2em)); }
       .steps:not(.is-vertical) .extra-data.has-overflow-centered {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1rem - (0.2em)); }
     .steps:not(.is-vertical).has-content-above .extra-data {
       top: 100%;
       bottom: auto; }
@@ -232,18 +235,21 @@
     right: calc(-50% + 1.3rem);
     bottom: 100%;
     position: absolute; }
-    .steps.is-horizontal .extra-data .has-overflow-right {
+    .steps.is-horizontal .extra-data.has-overflow-right {
       overflow: visible;
       right: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1rem - (0.2em)); }
     .steps.is-horizontal .extra-data.has-overflow-left {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1rem - (0.2em)); }
     .steps.is-horizontal .extra-data.has-overflow-centered {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1rem - (0.2em)); }
   .steps.is-horizontal.has-content-above .extra-data {
     top: 100%;
     bottom: auto; }
@@ -339,18 +345,21 @@
       right: calc(-50% + 1.05rem);
       bottom: 100%;
       position: absolute; }
-      .steps.is-small:not(.is-vertical) .extra-data .has-overflow-right {
+      .steps.is-small:not(.is-vertical) .extra-data.has-overflow-right {
         overflow: visible;
         right: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 0.75rem - (0.2em)); }
       .steps.is-small:not(.is-vertical) .extra-data.has-overflow-left {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 0.75rem - (0.2em)); }
       .steps.is-small:not(.is-vertical) .extra-data.has-overflow-centered {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 0.75rem - (0.2em)); }
     .steps.is-small:not(.is-vertical).has-content-above .extra-data {
       top: 100%;
       bottom: auto; }
@@ -395,18 +404,21 @@
     right: calc(-50% + 1.05rem);
     bottom: 100%;
     position: absolute; }
-    .steps.is-small.is-horizontal .extra-data .has-overflow-right {
+    .steps.is-small.is-horizontal .extra-data.has-overflow-right {
       overflow: visible;
       right: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 0.75rem - (0.2em)); }
     .steps.is-small.is-horizontal .extra-data.has-overflow-left {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 0.75rem - (0.2em)); }
     .steps.is-small.is-horizontal .extra-data.has-overflow-centered {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 0.75rem - (0.2em)); }
   .steps.is-small.is-horizontal.has-content-above .extra-data {
     top: 100%;
     bottom: auto; }
@@ -502,18 +514,21 @@
       right: calc(-50% + 1.55rem);
       bottom: 100%;
       position: absolute; }
-      .steps.is-medium:not(.is-vertical) .extra-data .has-overflow-right {
+      .steps.is-medium:not(.is-vertical) .extra-data.has-overflow-right {
         overflow: visible;
         right: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1.25rem - (0.2em)); }
       .steps.is-medium:not(.is-vertical) .extra-data.has-overflow-left {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1.25rem - (0.2em)); }
       .steps.is-medium:not(.is-vertical) .extra-data.has-overflow-centered {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1.25rem - (0.2em)); }
     .steps.is-medium:not(.is-vertical).has-content-above .extra-data {
       top: 100%;
       bottom: auto; }
@@ -558,18 +573,21 @@
     right: calc(-50% + 1.55rem);
     bottom: 100%;
     position: absolute; }
-    .steps.is-medium.is-horizontal .extra-data .has-overflow-right {
+    .steps.is-medium.is-horizontal .extra-data.has-overflow-right {
       overflow: visible;
       right: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1.25rem - (0.2em)); }
     .steps.is-medium.is-horizontal .extra-data.has-overflow-left {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1.25rem - (0.2em)); }
     .steps.is-medium.is-horizontal .extra-data.has-overflow-centered {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1.25rem - (0.2em)); }
   .steps.is-medium.is-horizontal.has-content-above .extra-data {
     top: 100%;
     bottom: auto; }
@@ -665,18 +683,21 @@
       right: calc(-50% + 1.8rem);
       bottom: 100%;
       position: absolute; }
-      .steps.is-large:not(.is-vertical) .extra-data .has-overflow-right {
+      .steps.is-large:not(.is-vertical) .extra-data.has-overflow-right {
         overflow: visible;
         right: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1.5rem - (0.2em)); }
       .steps.is-large:not(.is-vertical) .extra-data.has-overflow-left {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1.5rem - (0.2em)); }
       .steps.is-large:not(.is-vertical) .extra-data.has-overflow-centered {
         overflow: visible;
         left: auto;
-        min-width: calc(100% - 1.6em); }
+        white-space: nowrap;
+        min-width: calc(100% - 1.5rem - (0.2em)); }
     .steps.is-large:not(.is-vertical).has-content-above .extra-data {
       top: 100%;
       bottom: auto; }
@@ -721,18 +742,21 @@
     right: calc(-50% + 1.8rem);
     bottom: 100%;
     position: absolute; }
-    .steps.is-large.is-horizontal .extra-data .has-overflow-right {
+    .steps.is-large.is-horizontal .extra-data.has-overflow-right {
       overflow: visible;
       right: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1.5rem - (0.2em)); }
     .steps.is-large.is-horizontal .extra-data.has-overflow-left {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1.5rem - (0.2em)); }
     .steps.is-large.is-horizontal .extra-data.has-overflow-centered {
       overflow: visible;
       left: auto;
-      min-width: calc(100% - 1.6em); }
+      white-space: nowrap;
+      min-width: calc(100% - 1.5rem - (0.2em)); }
   .steps.is-large.is-horizontal.has-content-above .extra-data {
     top: 100%;
     bottom: auto; }
