@@ -187,20 +187,24 @@ $steps-thin-marker-size: .8em !default
       bottom: 100%
       position: absolute
 
-      .has-overflow-right
+      &.has-overflow-right
         overflow: visible
         right: auto
-        min-width: calc(100% - 1.6em)
+        white-space: nowrap
+        min-width: calc(100% - #{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}))
 
       &.has-overflow-left
         overflow: visible
         left: auto
-        min-width: calc(100% - 1.6em)
+        white-space: nowrap
+        min-width: calc(100% - #{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}))
 
       &.has-overflow-centered
         overflow: visible
         left: auto
-        min-width: calc(100% - 1.6em)
+        white-space: nowrap
+        min-width: calc(100% - #{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}))
+
     &.has-content-above .extra-data
       top: 100%
       bottom: auto
