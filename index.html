@@ -428,7 +428,7 @@ variables:
           <p>Be aware that it is floating and therefore does not occupy space within the DOM. Add margins above and below as needed.</p>
         </div>
 
-        {% capture steps_centered_content_example %}
+        {% capture steps_extra_data_example %}
         <div class="columns">
           <div class="column">
             <ul class="steps has-content-centered">
@@ -483,11 +483,11 @@ variables:
 
           <div class="bd-snippet">
             <div class="bd-snippet-preview">
-              {{steps_centered_content_example}}
+              {{steps_extra_data_example}}
             </div>
             <div class="bd-snippet-code highlight-full">
             {% highlight html %}
-            {{steps_centered_content_example}}
+            {{steps_extra_data_example}}
             {% endhighlight %}
             </div>
           </div>
@@ -495,13 +495,11 @@ variables:
 
         <div class="content">
           <p>
-            Add a sibling to <code>.steps-content</code> with the class of <code>.extra-data</code> to create between-steps data.
-            It works with <code>.has-content-above</code> as well.
+            Use <code>.has-overflow-left</code> or <code>.has-overflow-right</code> to allow extra data to overflow. By default, it will center and text-wrap for you.
           </p>
-          <p>Be aware that it is floating and therefore does not occupy space within the DOM. Add margins above and below as needed.</p>
         </div>
 
-        {% capture steps_centered_content_example %}
+        {% capture steps_extra_data_overflow_example %}
         <div class="columns">
           <div class="column">
             <ul class="steps has-content-centered">
@@ -516,7 +514,9 @@ variables:
                 <div class="steps-content">
                   <p class="is-size-4">Step 2</p>
                 </div>
-                <div class="extra-data">Hello, there.</div>
+                <div class="extra-data has-overflow-left">
+                  <span>This snippet overflows from step 3, and stays right-aligned.</span>
+                </div>
               </li>
               <li class="steps-segment ">
                 <span class="steps-marker"></span>
@@ -527,11 +527,14 @@ variables:
             </ul>
           </div>
           <div class="column">
-            <ul class="steps has-content-centered has-content-above">
+            <ul class="steps has-content-centered">
               <li class="steps-segment">
                 <span class="steps-marker"></span>
                 <div class="steps-content">
                   <p class="is-size-4">Step 1</p>
+                </div>
+                <div class="extra-data has-overflow-right">
+                  <span>This one overflows from step 1 in the opposite direction.</span>
                 </div>
               </li>
               <li class="steps-segment is-active">
@@ -539,7 +542,6 @@ variables:
                 <div class="steps-content">
                   <p class="is-size-4">Step 2</p>
                 </div>
-                <div class="extra-data">General Kenobi!</div>
               </li>
               <li class="steps-segment ">
                 <span class="steps-marker"></span>
@@ -556,11 +558,11 @@ variables:
 
           <div class="bd-snippet">
             <div class="bd-snippet-preview">
-              {{steps_centered_content_example}}
+              {{steps_extra_data_overflow_example}}
             </div>
             <div class="bd-snippet-code highlight-full">
             {% highlight html %}
-            {{steps_centered_content_example}}
+            {{steps_extra_data_overflow_example}}
             {% endhighlight %}
             </div>
           </div>
