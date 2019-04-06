@@ -556,16 +556,82 @@ variables:
 
         {% endcapture %}
 
-          <div class="bd-snippet">
+        <div class="bd-snippet">
             <div class="bd-snippet-preview">
-              {{steps_extra_data_overflow_example}}
+                {{steps_extra_data_overflow_example}}
             </div>
             <div class="bd-snippet-code highlight-full">
-            {% highlight html %}
-            {{steps_extra_data_overflow_example}}
-            {% endhighlight %}
+                {% highlight html %}
+                    {{steps_extra_data_overflow_example}}
+                {% endhighlight %}
             </div>
-          </div>
+        </div>
+
+
+    <div class="content">
+        <p>
+            Use the <code>has-hover-card</code> class on either
+            <code>.steps-segment</code> or <code>.steps</code>
+            to show a card on hover of each step.
+            Be aware that any content that is show on hover is floating,
+            and will take up space.
+        </p>
+        <p>
+            the structure of card is very similar to
+        </p>
+    </div>
+
+    {% capture steps_centered_content_example %}
+    <ul class="steps has-content-centered has-hover-card">
+        <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content card">
+                <p class="is-size-4 card-header">Step 1</p>
+                <div class="card-content">
+                    this entire card is hidden to start.
+                </div>
+            </div>
+        </li>
+        <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="is-size-4">Step 2</p>
+                        </div>
+                        <div class="card-content show-on-hover">
+                            this is a card that shows up on hover.
+                        </div>
+                    </div>
+            </div>
+        </li>
+        <li class="steps-segment is-active">
+            <span class="steps-marker"></span>
+            <div class="steps-content">
+                <p class="is-size-4">Step 3</p>
+                <p>This is the third step. This is halfway between the start and the end.</p>
+            </div>
+        </li>
+        <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content">
+                <p class="is-size-4">Step 4</p>
+                <p>The fourth step. Nearly there!</p>
+            </div>
+        </li>
+    </ul>
+    {% endcapture %}
+
+    <div class="bd-snippet">
+        <div class="bd-snippet-preview">
+            {{steps_centered_content_example}}
+        </div>
+        <div class="bd-snippet-code highlight-full">
+            {% highlight html %}
+            {{steps_centered_content_example}}
+            {% endhighlight %}
+        </div>
+    </div>
 
 
 

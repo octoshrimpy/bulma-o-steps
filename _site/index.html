@@ -871,9 +871,9 @@
 
         
 
-          <div class="bd-snippet">
+        <div class="bd-snippet">
             <div class="bd-snippet-preview">
-              
+                
         <div class="columns">
           <div class="column">
             <ul class="steps has-content-centered">
@@ -931,7 +931,7 @@
         
             </div>
             <div class="bd-snippet-code highlight-full">
-            <figure class="highlight"><pre><code class="language-html" data-lang="html">            
+                <figure class="highlight"><pre><code class="language-html" data-lang="html">                    
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-content-centered"</span><span class="nt">&gt;</span>
@@ -987,9 +987,113 @@
 
 
         
-            </code></pre></figure>
+                </code></pre></figure>
             </div>
-          </div>
+        </div>
+
+
+    <div class="content">
+        <p>
+            Use the <code>has-hover-card</code> class on either
+            <code>.steps-segment</code> or <code>.steps</code>
+            to show a card on hover of each step.
+            Be aware that any content that is show on hover is floating,
+            and will take up space.
+        </p>
+        <p>
+            the structure of card is very similar to
+        </p>
+    </div>
+
+    
+
+    <div class="bd-snippet">
+        <div class="bd-snippet-preview">
+            
+    <ul class="steps has-content-centered has-hover-card">
+        <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content card">
+                <p class="is-size-4 card-header">Step 1</p>
+                <div class="card-content">
+                    this entire card is hidden to start.
+                </div>
+            </div>
+        </li>
+        <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="is-size-4">Step 2</p>
+                        </div>
+                        <div class="card-content show-on-hover">
+                            this is a card that shows up on hover.
+                        </div>
+                    </div>
+            </div>
+        </li>
+        <li class="steps-segment is-active">
+            <span class="steps-marker"></span>
+            <div class="steps-content">
+                <p class="is-size-4">Step 3</p>
+                <p>This is the third step. This is halfway between the start and the end.</p>
+            </div>
+        </li>
+        <li class="steps-segment">
+            <span class="steps-marker"></span>
+            <div class="steps-content">
+                <p class="is-size-4">Step 4</p>
+                <p>The fourth step. Nearly there!</p>
+            </div>
+        </li>
+    </ul>
+    
+        </div>
+        <div class="bd-snippet-code highlight-full">
+            <figure class="highlight"><pre><code class="language-html" data-lang="html">            
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps has-content-centered has-hover-card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content card"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4 card-header"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-content"</span><span class="nt">&gt;</span>
+                    this entire card is hidden to start.
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-content show-on-hover"</span><span class="nt">&gt;</span>
+                            this is a card that shows up on hover.
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment is-active"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;p&gt;</span>This is the third step. This is halfway between the start and the end.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steps-segment"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"steps-marker"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"is-size-4"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;p&gt;</span>The fourth step. Nearly there!<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    
+            </code></pre></figure>
+        </div>
+    </div>
 
 
 
@@ -2307,7 +2411,7 @@
             <code style="white-space: nowrap;">$steps-completed-color</code>
           </td>
           <td>
-            <code>$uccess</code>
+            <code>$success</code>
           </td>
         </tr>
       

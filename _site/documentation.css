@@ -14,6 +14,62 @@
 .steps:not(:last-child) {
   margin-bottom: 1.5rem; }
 
+/*
+ *                          iiii                        iiii
+ *                         i::::i                      i::::i
+ *                          iiii                        iiii
+ *   mmmmmmm    mmmmmmm   iiiiiii xxxxxxx      xxxxxxxiiiiiiinnnn  nnnnnnnn        ssssssssss
+ * mm:::::::m  m:::::::mm i:::::i  x:::::x    x:::::x i:::::in:::nn::::::::nn    ss::::::::::s
+ *m::::::::::mm::::::::::m i::::i   x:::::x  x:::::x   i::::in::::::::::::::nn ss:::::::::::::s
+ *m::::::::::::::::::::::m i::::i    x:::::xx:::::x    i::::inn:::::::::::::::ns::::::ssss:::::s
+ *m:::::mmm::::::mmm:::::m i::::i     x::::::::::x     i::::i  n:::::nnnn:::::n s:::::s  ssssss
+ *m::::m   m::::m   m::::m i::::i      x::::::::x      i::::i  n::::n    n::::n   s::::::s
+ *m::::m   m::::m   m::::m i::::i      x::::::::x      i::::i  n::::n    n::::n      s::::::s
+ *m::::m   m::::m   m::::m i::::i     x::::::::::x     i::::i  n::::n    n::::nssssss   s:::::s
+ *m::::m   m::::m   m::::mi::::::i   x:::::xx:::::x   i::::::i n::::n    n::::ns:::::ssss::::::s
+ *m::::m   m::::m   m::::mi::::::i  x:::::x  x:::::x  i::::::i n::::n    n::::ns::::::::::::::s
+ *m::::m   m::::m   m::::mi::::::i x:::::x    x:::::x i::::::i n::::n    n::::n s:::::::::::ss
+ *mmmmmm   mmmmmm   mmmmmmiiiiiiiixxxxxxx      xxxxxxxiiiiiiii nnnnnn    nnnnnn  sssssssssss */
+/*
+ *bbbbbbbb
+ *b::::::b                                                iiii
+ *b::::::b                                               i::::i
+ *b::::::b                                                iiii
+ * b:::::b
+ * b:::::bbbbbbbbb      aaaaaaaaaaaaa      ssssssssss   iiiiiii     cccccccccccccccc
+ * b::::::::::::::bb    a::::::::::::a   ss::::::::::s  i:::::i   cc:::::::::::::::c
+ * b::::::::::::::::b   aaaaaaaaa:::::ass:::::::::::::s  i::::i  c:::::::::::::::::c
+ * b:::::bbbbb:::::::b           a::::as::::::ssss:::::s i::::i c:::::::cccccc:::::c
+ * b:::::b    b::::::b    aaaaaaa:::::a s:::::s  ssssss  i::::i c::::::c     ccccccc
+ * b:::::b     b:::::b  aa::::::::::::a   s::::::s       i::::i c:::::c
+ * b:::::b     b:::::b a::::aaaa::::::a      s::::::s    i::::i c:::::c
+ * b:::::b     b:::::ba::::a    a:::::assssss   s:::::s  i::::i c::::::c     ccccccc
+ * b:::::bbbbbb::::::ba::::a    a:::::as:::::ssss::::::si::::::ic:::::::cccccc:::::c
+ * b::::::::::::::::b a:::::aaaa::::::as::::::::::::::s i::::::i c:::::::::::::::::c
+ * b:::::::::::::::b   a::::::::::aa:::as:::::::::::ss  i::::::i  cc:::::::::::::::c
+ * bbbbbbbbbbbbbbbb     aaaaaaaaaa  aaaa sssssssssss    iiiiiiii    cccccccccccccccc */
+/*                        tttt
+ *                       ttt:::t
+ *                       t:::::t
+ *                       t:::::t
+ *    ssssssssss   ttttttt:::::ttttttt        eeeeeeeeeeee    ppppp   ppppppppp       ssssssssss
+ *  ss::::::::::s  t:::::::::::::::::t      ee::::::::::::ee  p::::ppp:::::::::p    ss::::::::::s
+ *ss:::::::::::::s t:::::::::::::::::t     e::::::eeeee:::::eep:::::::::::::::::p ss:::::::::::::s
+ *s::::::ssss:::::stttttt:::::::tttttt    e::::::e     e:::::epp::::::ppppp::::::ps::::::ssss:::::s
+ * s:::::s  ssssss       t:::::t          e:::::::eeeee::::::e p:::::p     p:::::p s:::::s  ssssss
+ *   s::::::s            t:::::t          e:::::::::::::::::e  p:::::p     p:::::p   s::::::s
+ *      s::::::s         t:::::t          e::::::eeeeeeeeeee   p:::::p     p:::::p      s::::::s
+ *ssssss   s:::::s       t:::::t    tttttte:::::::e            p:::::p    p::::::pssssss   s:::::s
+ *s:::::ssss::::::s      t::::::tttt:::::te::::::::e           p:::::ppppp:::::::ps:::::ssss::::::s
+ *s::::::::::::::s       tt::::::::::::::t e::::::::eeeeeeee   p::::::::::::::::p s::::::::::::::s
+ * s:::::::::::ss          tt:::::::::::tt  ee:::::::::::::e   p::::::::::::::pp   s:::::::::::ss
+ *  sssssssssss              ttttttttttt      eeeeeeeeeeeeee   p::::::pppppppp      sssssssssss
+ *                                                             p:::::p
+ *                                                             p:::::p
+ *                                                            p:::::::p
+ *                                                            p:::::::p
+ *                                                            p:::::::p
+ *                                                            ppppppppp */
 .steps .steps-segment {
   position: relative; }
   .steps .steps-segment:not(:last-child):after {
@@ -789,6 +845,24 @@
     left: calc(50% + 1.8rem);
     right: calc(-50% + 1.8rem); }
 
+/*
+ *                                                     dddddddd
+ *                                                     d::::::d  iiii     ffffffffffffffff    iiii
+ *                                                     d::::::d i::::i   f::::::::::::::::f  i::::i
+ *                                                     d::::::d  iiii   f::::::::::::::::::f  iiii
+ *                                                     d:::::d          f::::::fffffff:::::f
+ *   mmmmmmm    mmmmmmm      ooooooooooo       ddddddddd:::::d iiiiiii  f:::::f       ffffffiiiiiii     eeeeeeeeeeee    rrrrr   rrrrrrrrr       ssssssssss
+ * mm:::::::m  m:::::::mm  oo:::::::::::oo   dd::::::::::::::d i:::::i  f:::::f             i:::::i   ee::::::::::::ee  r::::rrr:::::::::r    ss::::::::::s
+ *m::::::::::mm::::::::::mo:::::::::::::::o d::::::::::::::::d  i::::i f:::::::ffffff        i::::i  e::::::eeeee:::::eer:::::::::::::::::r ss:::::::::::::s
+ *m::::::::::::::::::::::mo:::::ooooo:::::od:::::::ddddd:::::d  i::::i f::::::::::::f        i::::i e::::::e     e:::::err::::::rrrrr::::::rs::::::ssss:::::s
+ *m:::::mmm::::::mmm:::::mo::::o     o::::od::::::d    d:::::d  i::::i f::::::::::::f        i::::i e:::::::eeeee::::::e r:::::r     r:::::r s:::::s  ssssss
+ *m::::m   m::::m   m::::mo::::o     o::::od:::::d     d:::::d  i::::i f:::::::ffffff        i::::i e:::::::::::::::::e  r:::::r     rrrrrrr   s::::::s
+ *m::::m   m::::m   m::::mo::::o     o::::od:::::d     d:::::d  i::::i  f:::::f              i::::i e::::::eeeeeeeeeee   r:::::r                  s::::::s
+ *m::::m   m::::m   m::::mo::::o     o::::od:::::d     d:::::d  i::::i  f:::::f              i::::i e:::::::e            r:::::r            ssssss   s:::::s
+ *m::::m   m::::m   m::::mo:::::ooooo:::::od::::::ddddd::::::ddi::::::if:::::::f            i::::::ie::::::::e           r:::::r            s:::::ssss::::::s
+ *m::::m   m::::m   m::::mo:::::::::::::::o d:::::::::::::::::di::::::if:::::::f            i::::::i e::::::::eeeeeeee   r:::::r            s::::::::::::::s
+ *m::::m   m::::m   m::::m oo:::::::::::oo   d:::::::::ddd::::di::::::if:::::::f            i::::::i  ee:::::::::::::e   r:::::r             s:::::::::::ss
+ *mmmmmm   mmmmmm   mmmmmm   ooooooooooo      ddddddddd   dddddiiiiiiiifffffffff            iiiiiiii    eeeeeeeeeeeeee   rrrrrrr              sssssssssss */
 .steps-segment:after {
   background-color: #23d160; }
 .steps-segment.is-active:after {
@@ -1016,6 +1090,9 @@
     padding-top: 0;
     display: flex;
     flex-direction: column-reverse; }
+
+.steps:not(.is-vertical).has-content-centered .card .card-header {
+  justify-content: center; }
 
 .title-col {
   display: flex;
