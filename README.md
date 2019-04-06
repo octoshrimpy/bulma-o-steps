@@ -12,7 +12,7 @@ Original written by [aramvisser](https://github.com/aramvisser) over at [his ori
 [Usage & Examples](https://octoshrimpy.github.io/bulma-o-steps)
 
 I'm trying to keep this working with the latest available Bulma version.     
-Currently tracking: **bulma v0.7.1**. Other versions _should_ work, but no promises.
+Currently tracking: **bulma v0.7.4**. Other versions _should_ work, but no promises.
 
 ## Installation
 
