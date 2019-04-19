@@ -1,0 +1,21 @@
+$steps-divider-thin: 2px !default;
+$steps-marker-size-thin: 1rem !default;
+
+.steps.is-thin {
+    .steps-segment {
+        &:not(:first-child):after {
+            height: $steps-divider-thin;
+            right: $steps-marker-size-thin;
+            width: calc(100% - #{$steps-marker-size-thin});
+        }
+
+        .steps-marker {
+            height: $steps-marker-size-thin;
+            width: $steps-marker-size-thin;
+
+            .icon {
+                display: none;
+            }
+        }
+    }
+}

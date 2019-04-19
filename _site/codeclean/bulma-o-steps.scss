@@ -7,6 +7,7 @@ $steps-completed-text      : $white !default;
 $steps-completed-background: $success !default;
 
 $steps-marker-size : 2rem !default;
+$steps-divider-height: 0.33rem !default;
 
 //dev shim
 .parent-wrap {
@@ -40,7 +41,7 @@ $steps-marker-size : 2rem !default;
 
             &:after {
                 content: '';
-                height: 0.33rem;
+                height: $steps-divider-height;
                 position: absolute;
                 width: calc(100% - #{$steps-marker-size});
                 right: $steps-marker-size;
@@ -67,6 +68,7 @@ $steps-marker-size : 2rem !default;
             justify-content: center;
             border-radius: 999px;
             z-index: 2;
+
 
 
             //colors
