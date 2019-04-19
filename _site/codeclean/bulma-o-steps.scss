@@ -1,0 +1,103 @@
+// shim for converting to a css file
+@import "./styles/utilities/_all.sass";
+
+$steps-default-background  : $grey-lighter !default;
+$steps-default-text        : $grey-darker !default;
+$steps-completed-text      : $white !default;
+$steps-completed-background: $success !default;
+
+$steps-marker-size : 2rem !default;
+
+//dev shim
+.parent-wrap {
+    width: 40rem;
+
+    > * {
+        padding: 3rem 1rem;
+    }
+}
+
+
+// basic steps
+.steps {
+    display: flex;
+    width: 100%;
+
+    .steps-segment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-items: flex-end;
+
+        // keeps the last element to the right
+        &:not(:first-child) {
+            flex-grow: 1;
+        }
+
+        // divider
+        &:not(:first-child) {
+
+            &:after {
+                content: '';
+                height: 0.33rem;
+                position: absolute;
+                width: calc(100% - #{$steps-marker-size});
+                right: $steps-marker-size;
+                background: $steps-default-background;
+                z-index: 1;
+            }
+        }
+
+        &.is-completed {
+
+            .steps-marker {
+                background: $steps-completed-background;
+                color: $steps-completed-text;
+            }
+
+            &:after {
+                background: $steps-completed-background;
+            }
+        }
+
+        .steps-marker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            z-index: 2;
+
+
+            //colors
+            background: $steps-default-background;
+
+
+            //sizing
+            height: $steps-marker-size;
+            width: $steps-marker-size;
+            font-size: $steps-marker-size * 0.45;
+        }
+    }
+}
+
+
+
+
+@import './step-modifiers/_index';
+
+
+
+
+// modifiers
+
+
+// is-centered
+// is-balanced
+// is-thin
+// is-small
+// is-medium
+// is-thick
+// is-vertical
+// is-short
+// is-
