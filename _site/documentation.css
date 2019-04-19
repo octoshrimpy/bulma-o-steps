@@ -1093,6 +1093,15 @@
 
 .steps:not(.is-vertical).has-content-centered .card .card-header {
   justify-content: center; }
+.steps:not(.is-vertical).has-hover-card .steps-content .card, .steps:not(.is-vertical) .has-hover-card .steps-content .card {
+  position: absolute;
+  z-index: 1; }
+.steps:not(.is-vertical).has-hover-card .show-on-hover, .steps:not(.is-vertical) .has-hover-card .show-on-hover {
+  opacity: 0; }
+.steps:not(.is-vertical) .steps-marker, .steps:not(.is-vertical) .steps-content .card {
+  cursor: pointer; }
+  .steps:not(.is-vertical) .steps-marker:hover ~ .steps-content > .card, .steps:not(.is-vertical) .steps-content .card:hover ~ .steps-content > .card {
+    opacity: 1; }
 
 .title-col {
   display: flex;

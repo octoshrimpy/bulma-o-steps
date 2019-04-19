@@ -536,21 +536,17 @@ $steps-thin-marker-size: 0.8em !default
         justify-content: center
 
   &.has-hover-card, .has-hover-card
-    .card
-      .card-header
+    .steps-content .card
+      position: absolute
+      z-index: 1
 
-    .steps-content
-      // position: absolute;
+    .show-on-hover
+      opacity: 0
 
-    // .show-on-hover {
-    //     display: none;
-    //
-    // }
-    //
-    // .steps-segment:hover {
-    //     .show-on-hover {
-    //         display: initial;
-    //     }
-    // }
+  .steps-marker, .steps-content .card
+    cursor: pointer
+
+    &:hover ~ .steps-content > .card
+      opacity: 1
 
 //

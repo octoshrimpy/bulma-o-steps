@@ -1,0 +1,586 @@
+// shim for converting to a css file
+@import "./styles/utilities/_all.sass";
+
+$steps-default-color: $grey-lighter !default;
+$steps-completed-color: $success !default;
+$steps-active-color: $success !default;
+$steps-horizontal-min-width: 10em !default;
+$steps-vertical-min-height: 4em !default;
+$steps-marker-size: 2 !default;
+$steps-divider-size: 0.4em !default;
+$steps-gap-size: 0.3rem !default;
+$steps-hollow-border-size: 0.3em !default;
+$steps-thin-divider-size: 1px !default;
+$steps-thin-marker-size: 0.8em !default;
+
+@mixin steps-horizontal {
+  @include tablet {
+    &:not(.is-vertical) {
+      @content;
+    }
+  }
+
+
+  &.is-horizontal {
+    @content;
+  }
+}
+
+@mixin steps-vertical {
+  @include mobile {
+    &:not(.is-horizontal) {
+      @content;
+    }
+  }
+
+
+  &.is-vertical {
+    @content;
+  }
+}
+
+@mixin steps-all-segments {
+  &.steps .steps-segment {
+    @content;
+  }
+}
+
+@mixin steps-active-segment {
+  &.steps .steps-segment.is-active {
+    @content;
+  }
+}
+
+@mixin steps-inactive-segments {
+  &.steps .steps-segment.is-active ~ .steps-segment {
+    @content;
+  }
+}
+
+.steps {
+  @include block;
+
+  .steps-segment {
+    position: relative;
+
+    &:not(:last-child):after {
+      // This will contain the horizontal or vertical divider
+      content: " ";
+      display: block;
+      position: absolute;
+    }
+  }
+
+  @include steps-vertical {
+    .steps-segment {
+      display: block;
+
+      &:not(:last-child) {
+        min-height: $steps-vertical-min-height;
+      }
+    }
+
+    &.is-short {
+      .steps-segment {
+        flex-grow: 0;
+
+        &:not(:last-child) {
+          //this is commented because text would be running perpendicular to the line, so we won't need as much room
+          // min-height: $steps-horizontal-min-width
+       
+        }
+      }
+    }
+
+    &.is-short.is-centered {
+      justify-content: center;
+    }
+
+    &.is-short.is-bottom {
+      justify-content: flex-end;
+    }
+
+    &:not(.is-short) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .steps-segment:not(:last-child) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+
+  @include steps-horizontal {
+    display: flex;
+
+    .steps-segment:not(:last-child) {
+      flex-basis: 1rem;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+
+    &.is-narrow {
+      .steps-segment {
+        flex-grow: 0;
+
+        &:not(:last-child) {
+          min-width: $steps-horizontal-min-width;
+        }
+      }
+    }
+
+    &.is-narrow.is-centered {
+      justify-content: center;
+    }
+
+    &.is-narrow.is-right {
+      justify-content: flex-end;
+    }
+
+    &.has-content-centered {
+      text-align: center;
+    }
+
+    &.is-balanced, &.has-content-centered {
+      .steps-segment:last-child {
+        flex-basis: 1rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    &.is-narrow.has-content-centered {
+      .steps-segment:last-child {
+        flex-grow: 0;
+        min-width: $steps-horizontal-min-width;
+      }
+    }
+
+    .steps-content.is-divider-content {
+      text-align: center;
+    }
+  }
+
+
+  // Marker style
+  .steps-marker {
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    font-weight: $weight-bold;
+    justify-content: center;
+
+    // Position & z-index are needed to put it above the divider
+    position: relative;
+    z-index: 5;
+  }
+}
+
+// Use a mixin to define all ratios in the same spot
+@mixin steps-size($size) {
+  font-size: $size;
+
+  .steps-marker {
+    height: $size * $steps-marker-size;
+    width: $size * $steps-marker-size;
+    overflow: hidden;
+  }
+
+  @include steps-vertical {
+    // Draw a vertical divider
+    display: flex;
+    flex-direction: column;
+
+    .steps-segment:not(:last-child):after {
+      // top and bottom position is almost touching the inner side of a hollow border marker
+      bottom: -$steps-gap-size * 0.8;
+      left: calc(#{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}));
+      top: $size * $steps-marker-size - $steps-gap-size * 0.8;
+      width: $steps-divider-size;
+    }
+
+    // Align the content with the marker
+    .steps-content {
+      margin-left: calc(#{$size * $steps-marker-size / 2} + .5em);
+      margin-top: -$size * $steps-marker-size;
+      padding-left: 1em;
+      padding-bottom: 1em;
+    }
+
+    .steps-content.is-divider-content {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    &.has-content-centered {
+      .steps-content {
+        padding-top: calc(#{$size * $steps-marker-size / 2} - .5em);
+      }
+    }
+
+    &:not(.is-thin) {
+      &.has-gaps .steps-segment, .steps-segment.has-gaps {
+        &:not(:last-child):after {
+          top: $size * $steps-marker-size + $steps-gap-size;
+          bottom: $steps-gap-size;
+        }
+      }
+    }
+  }
+
+
+  @include steps-horizontal {
+    // Draw a horizontal divider
+    .steps-segment:not(:last-child):after {
+      height: $steps-divider-size;
+
+      // top and bottom position is almost touching the inner side of a hollow border marker
+      left: $size * $steps-marker-size - $steps-gap-size * 0.8;
+      right: -$steps-gap-size * 0.8;
+      top: calc(#{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}));
+    }
+
+    &.has-content-above .steps-segment:not(:last-child)::after {
+      bottom: calc(#{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}));
+      top: auto;
+    }
+
+    // extra data
+    .extra-data {
+      left: calc(50% + #{$size * $steps-marker-size / 2 + $steps-gap-size});
+      right: calc(-50% + #{$size * $steps-marker-size / 2 + $steps-gap-size});
+      bottom: 100%;
+      position: absolute;
+
+      &.has-overflow-right {
+        overflow: visible;
+        right: auto;
+        white-space: nowrap;
+        min-width: calc(100% - #{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}));
+      }
+
+      &.has-overflow-left {
+        overflow: visible;
+        left: auto;
+        white-space: nowrap;
+        min-width: calc(100% - #{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}));
+      }
+
+      &.has-overflow-centered {
+        overflow: visible;
+        left: auto;
+        white-space: nowrap;
+        min-width: calc(100% - #{$size * $steps-marker-size / 2} - (#{$steps-divider-size / 2}));
+      }
+    }
+
+    &.has-content-above .extra-data {
+      top: 100%;
+      bottom: auto;
+    }
+
+    // Align the content with the marker
+    .steps-content {
+      margin-left: $size * $steps-marker-size / 2;
+
+      &:not(:last-child) {
+        margin-right: -$size * $steps-marker-size / 2;
+      }
+
+      &.is-divider-content {
+        margin-right: -$size * $steps-marker-size / 2;
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    }
+
+    &.has-content-centered {
+      .steps-segment:not(:last-child):after {
+        left: 50%;
+        right: -50%;
+      }
+
+      .steps-marker {
+        position: absolute;
+        left: calc(50% - #{$size * $steps-marker-size / 2});
+      }
+
+      .steps-content {
+        margin-top: $size * $steps-marker-size;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        padding-top: 0.2em;
+      }
+    }
+
+    &.has-content-above.has-content-centered .steps-content {
+      margin-bottom: $size * $steps-marker-size;
+      padding-bottom: 0.2em;
+    }
+
+    &:not(.is-thin) {
+      &.has-gaps .steps-segment, .steps-segment.has-gaps {
+        &:not(:last-child):after {
+          left: $size * $steps-marker-size + $steps-gap-size;
+          right: $steps-gap-size;
+        }
+      }
+
+      &.has-content-centered {
+        &.has-gaps .steps-segment, .steps-segment.has-gaps {
+          &:not(:last-child):after {
+            left: calc(50% + #{$size * $steps-marker-size / 2 + $steps-gap-size});
+            right: calc(-50% + #{$size * $steps-marker-size / 2 + $steps-gap-size});
+          }
+        }
+      }
+    }
+  }
+}
+
+.steps {
+  @include steps-size($size-normal);
+}
+
+.steps.is-small {
+  @include steps-size($size-small);
+}
+
+.steps.is-medium {
+  @include steps-size($size-medium);
+}
+
+.steps.is-large {
+  @include steps-size($size-large);
+}
+
+// Divider Default Colors
+.steps-segment {
+  &:after {
+    background-color: $steps-completed-color;
+  }
+
+  &.is-active {
+    &:after {
+      background-color: $steps-default-color;
+    }
+  }
+
+  &.is-active ~ .steps-segment {
+    &:after {
+      background-color: $steps-default-color;
+    }
+  }
+}
+
+// Marker Default Colors
+.steps:not(.is-hollow) {
+  .steps-marker:not(.is-hollow) {
+    background-color: $steps-completed-color;
+    color: findColorInvert($steps-completed-color);
+  }
+
+  .steps-segment.is-active {
+    .steps-marker:not(.is-hollow) {
+      background-color: $steps-active-color;
+      color: findColorInvert($steps-active-color);
+    }
+  }
+
+  .steps-segment.is-active {
+    & ~ .steps-segment .steps-marker:not(.is-hollow) {
+      background-color: $steps-default-color;
+      color: findColorInvert($steps-default-color);
+    }
+  }
+}
+
+// Hollow style
+.steps.is-hollow .steps-marker,
+.steps-marker.is-hollow {
+  border: $steps-hollow-border-size solid $steps-completed-color;
+}
+
+.steps.is-hollow .is-active .steps-marker,
+.steps .is-active .steps-marker.is-hollow {
+  border-color: $steps-active-color;
+}
+
+.steps.is-hollow .steps-segment.is-active ~ .steps-segment .steps-marker,
+.steps-segment.is-active ~ .steps-segment .steps-marker.is-hollow {
+  border-color: $steps-default-color;
+}
+
+// Override marker color per step
+@each $name, $pair in $colors {
+  $color: nth($pair, 1);
+  $color-invert: nth($pair, 2);
+
+  .steps:not(.is-hollow) .steps-marker:not(.is-hollow) {
+    &.is-#{$name} {
+      background-color: $color !important;
+      color: $color-invert !important;
+    }
+  }
+
+  .steps.is-hollow .steps-marker,
+  .steps .steps-marker.is-hollow {
+    &.is-#{$name} {
+      border-color: $color !important;
+    }
+  }
+}
+
+// Divider dashed style
+@mixin steps-divider-background($angle, $color, $size) {
+  background: repeating-linear-gradient($angle, $color, $color $size, transparent $size, transparent #{$size * 2});
+}
+
+.steps {
+  @include steps-vertical {
+    &.is-dashed .steps-segment, .steps-segment.is-dashed {
+      &:after {
+        @include steps-divider-background(0deg, $steps-completed-color, 5px);
+      }
+    }
+
+    &.is-dashed .steps-segment.is-active,
+    &.is-dashed .steps-segment.is-active ~ .steps-segment,
+    .steps-segment.is-active.is-dashed,
+    .steps-segment.is-active ~ .steps-segment.is-dashed {
+      &:after {
+        @include steps-divider-background(0deg, $steps-default-color, 5px);
+      }
+    }
+  }
+
+
+  @include steps-horizontal {
+    &.is-dashed .steps-segment,
+    .steps-segment.is-dashed {
+      &:after {
+        @include steps-divider-background(90deg, $steps-completed-color, 10px);
+      }
+    }
+
+    // the active segment and any subsequent segment get the default colot
+    &.is-dashed .steps-segment.is-active,
+    &.is-dashed .steps-segment.is-active ~ .steps-segment,
+    .steps-segment.is-active.is-dashed,
+    .steps-segment.is-active ~ .steps-segment.is-dashed {
+      &:after {
+        @include steps-divider-background(90deg, $steps-default-color, 10px);
+      }
+    }
+  }
+}
+
+// Thin modifier
+.steps.is-thin {
+  .steps-marker {
+    width: $steps-thin-marker-size;
+    height: $steps-thin-marker-size;
+  }
+
+  &.is-hollow .steps-marker,
+  .steps-marker.is-hollow {
+    border-width: $steps-thin-divider-size;
+    height: calc(#{$steps-thin-marker-size} + #{$steps-thin-divider-size});
+    width: calc(#{$steps-thin-marker-size} + #{$steps-thin-divider-size});
+  }
+
+  @include steps-vertical {
+    .steps-segment {
+      &:not(:last-child):after {
+        bottom: 0;
+        left: calc(#{$steps-thin-marker-size / 2} - #{$steps-thin-divider-size / 2});
+        top: $steps-thin-marker-size;
+        width: $steps-thin-divider-size;
+      }
+    }
+
+    .steps-content {
+      margin-top: -$steps-thin-marker-size * 1.5;
+      margin-left: $steps-thin-marker-size;
+    }
+
+    &.has-gaps .steps-segment, .steps-segment.has-gaps {
+      &:not(:last-child):after {
+        bottom: $steps-thin-marker-size / 2;
+        top: $steps-thin-marker-size * 1.5;
+      }
+    }
+
+    &.has-content-centered {
+      .steps-content {
+        padding-top: $steps-thin-marker-size * 2;
+      }
+    }
+  }
+
+
+  @include steps-horizontal {
+    .steps-segment {
+      &:not(:last-child):after {
+        left: $steps-thin-marker-size;
+        right: 0;
+        top: calc(#{$steps-thin-marker-size / 2} - #{$steps-thin-divider-size / 2});
+        height: $steps-thin-divider-size;
+      }
+    }
+
+    &.has-content-above .steps-segment:not(:last-child)::after {
+      bottom: calc(#{$steps-thin-marker-size / 2} - #{$steps-thin-divider-size / 2});
+      top: auto;
+    }
+
+    .steps-content {
+      margin-top: $steps-thin-marker-size;
+    }
+
+    &.has-content-centered {
+      .steps-segment {
+        &:not(:last-child):after {
+          left: calc(50% + #{$steps-thin-marker-size / 2});
+          right: calc(-50% + #{$steps-thin-marker-size / 2});
+        }
+      }
+
+      .steps-marker {
+        position: absolute;
+        left: calc(50% - #{$steps-thin-marker-size / 2});
+      }
+    }
+
+    &.has-gaps .steps-segment, .steps-segment.has-gaps {
+      &:not(:last-child):after {
+        left: $steps-thin-marker-size * 1.5;
+        right: $steps-thin-marker-size / 2;
+      }
+    }
+
+    &.has-content-centered.has-gaps .steps-segment, &.has-content-centered .steps-segment.has-gaps {
+      &:not(:last-child):after {
+        left: calc(50% + #{$steps-thin-marker-size / 2 + $steps-thin-marker-size / 2});
+        right: calc(-50% + #{$steps-thin-marker-size / 2 + $steps-thin-marker-size / 2});
+      }
+    }
+  }
+}
+
+//.has-content-above
+.steps:not(.is-vertical).has-content-above {
+  .steps-segment {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .steps-content {
+      margin-top: 0;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

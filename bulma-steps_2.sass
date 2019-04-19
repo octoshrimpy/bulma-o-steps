@@ -13,24 +13,6 @@ $steps-hollow-border-size: 0.3em !default
 $steps-thin-divider-size: 1px !default
 $steps-thin-marker-size: 0.8em !default
 
-/*
- *
- *                          iiii                        iiii
- *                         i::::i                      i::::i
- *                          iiii                        iiii
- *   mmmmmmm    mmmmmmm   iiiiiii xxxxxxx      xxxxxxxiiiiiiinnnn  nnnnnnnn        ssssssssss
- * mm:::::::m  m:::::::mm i:::::i  x:::::x    x:::::x i:::::in:::nn::::::::nn    ss::::::::::s
- *m::::::::::mm::::::::::m i::::i   x:::::x  x:::::x   i::::in::::::::::::::nn ss:::::::::::::s
- *m::::::::::::::::::::::m i::::i    x:::::xx:::::x    i::::inn:::::::::::::::ns::::::ssss:::::s
- *m:::::mmm::::::mmm:::::m i::::i     x::::::::::x     i::::i  n:::::nnnn:::::n s:::::s  ssssss
- *m::::m   m::::m   m::::m i::::i      x::::::::x      i::::i  n::::n    n::::n   s::::::s
- *m::::m   m::::m   m::::m i::::i      x::::::::x      i::::i  n::::n    n::::n      s::::::s
- *m::::m   m::::m   m::::m i::::i     x::::::::::x     i::::i  n::::n    n::::nssssss   s:::::s
- *m::::m   m::::m   m::::mi::::::i   x:::::xx:::::x   i::::::i n::::n    n::::ns:::::ssss::::::s
- *m::::m   m::::m   m::::mi::::::i  x:::::x  x:::::x  i::::::i n::::n    n::::ns::::::::::::::s
- *m::::m   m::::m   m::::mi::::::i x:::::x    x:::::x i::::::i n::::n    n::::n s:::::::::::ss
- *mmmmmm   mmmmmm   mmmmmmiiiiiiiixxxxxxx      xxxxxxxiiiiiiii nnnnnn    nnnnnn  sssssssssss
-
 =steps-horizontal
   +tablet
     &:not(.is-vertical)
@@ -60,6 +42,99 @@ $steps-thin-marker-size: 0.8em !default
 =steps-inactive-segments
   &.steps .steps-segment.is-active ~ .steps-segment
     @content
+
+.steps
+  +block
+
+  .steps-segment
+    position: relative
+
+    &:not(:last-child):after
+      // This will contain the horizontal or vertical divider
+      content: " "
+      display: block
+      position: absolute
+
+  +steps-vertical
+    .steps-segment
+      display: block
+
+      &:not(:last-child)
+        min-height: $steps-vertical-min-height
+
+    &.is-short
+      .steps-segment
+        flex-grow: 0
+
+        &:not(:last-child)
+          //this is commented because text would be running perpendicular to the line, so we won't need as much room
+          // min-height: $steps-horizontal-min-width
+
+    &.is-short.is-centered
+      justify-content: center
+
+    &.is-short.is-bottom
+      justify-content: flex-end
+
+    &:not(.is-short)
+      height: 100%
+      display: flex
+      flex-direction: column
+
+      .steps-segment:not(:last-child)
+        flex-grow: 1
+
+
+  +steps-horizontal
+    display: flex
+
+    .steps-segment:not(:last-child)
+      flex-basis: 1rem
+      flex-grow: 1
+      flex-shrink: 1
+
+    &.is-narrow
+      .steps-segment
+        flex-grow: 0
+
+        &:not(:last-child)
+          min-width: $steps-horizontal-min-width
+
+    &.is-narrow.is-centered
+      justify-content: center
+
+    &.is-narrow.is-right
+      justify-content: flex-end
+
+    &.has-content-centered
+      text-align: center
+
+    &.is-balanced, &.has-content-centered
+      .steps-segment:last-child
+        flex-basis: 1rem
+        flex-grow: 1
+        flex-shrink: 1
+
+    &.is-narrow.has-content-centered
+      .steps-segment:last-child
+        flex-grow: 0
+        min-width: $steps-horizontal-min-width
+
+    .steps-content.is-divider-content
+      text-align: center
+
+
+  // Marker style
+  .steps-marker
+    align-items: center
+    display: flex
+    border-radius: 50%
+    font-weight: $weight-bold
+    justify-content: center
+
+    // Position & z-index are needed to put it above the divider
+    position: relative
+    z-index: 5
 
 // Use a mixin to define all ratios in the same spot
 =steps-size($size)
@@ -190,141 +265,6 @@ $steps-thin-marker-size: 0.8em !default
             left: calc(50% + #{$size * $steps-marker-size / 2 + $steps-gap-size})
             right: calc(-50% + #{$size * $steps-marker-size / 2 + $steps-gap-size})
 
-/*
- *
- *bbbbbbbb
- *b::::::b                                                iiii
- *b::::::b                                               i::::i
- *b::::::b                                                iiii
- * b:::::b
- * b:::::bbbbbbbbb      aaaaaaaaaaaaa      ssssssssss   iiiiiii     cccccccccccccccc
- * b::::::::::::::bb    a::::::::::::a   ss::::::::::s  i:::::i   cc:::::::::::::::c
- * b::::::::::::::::b   aaaaaaaaa:::::ass:::::::::::::s  i::::i  c:::::::::::::::::c
- * b:::::bbbbb:::::::b           a::::as::::::ssss:::::s i::::i c:::::::cccccc:::::c
- * b:::::b    b::::::b    aaaaaaa:::::a s:::::s  ssssss  i::::i c::::::c     ccccccc
- * b:::::b     b:::::b  aa::::::::::::a   s::::::s       i::::i c:::::c
- * b:::::b     b:::::b a::::aaaa::::::a      s::::::s    i::::i c:::::c
- * b:::::b     b:::::ba::::a    a:::::assssss   s:::::s  i::::i c::::::c     ccccccc
- * b:::::bbbbbb::::::ba::::a    a:::::as:::::ssss::::::si::::::ic:::::::cccccc:::::c
- * b::::::::::::::::b a:::::aaaa::::::as::::::::::::::s i::::::i c:::::::::::::::::c
- * b:::::::::::::::b   a::::::::::aa:::as:::::::::::ss  i::::::i  cc:::::::::::::::c
- * bbbbbbbbbbbbbbbb     aaaaaaaaaa  aaaa sssssssssss    iiiiiiii    cccccccccccccccc
-/*                        tttt
- *                       ttt:::t
- *                       t:::::t
- *                       t:::::t
- *    ssssssssss   ttttttt:::::ttttttt        eeeeeeeeeeee    ppppp   ppppppppp       ssssssssss
- *  ss::::::::::s  t:::::::::::::::::t      ee::::::::::::ee  p::::ppp:::::::::p    ss::::::::::s
- *ss:::::::::::::s t:::::::::::::::::t     e::::::eeeee:::::eep:::::::::::::::::p ss:::::::::::::s
- *s::::::ssss:::::stttttt:::::::tttttt    e::::::e     e:::::epp::::::ppppp::::::ps::::::ssss:::::s
- * s:::::s  ssssss       t:::::t          e:::::::eeeee::::::e p:::::p     p:::::p s:::::s  ssssss
- *   s::::::s            t:::::t          e:::::::::::::::::e  p:::::p     p:::::p   s::::::s
- *      s::::::s         t:::::t          e::::::eeeeeeeeeee   p:::::p     p:::::p      s::::::s
- *ssssss   s:::::s       t:::::t    tttttte:::::::e            p:::::p    p::::::pssssss   s:::::s
- *s:::::ssss::::::s      t::::::tttt:::::te::::::::e           p:::::ppppp:::::::ps:::::ssss::::::s
- *s::::::::::::::s       tt::::::::::::::t e::::::::eeeeeeee   p::::::::::::::::p s::::::::::::::s
- * s:::::::::::ss          tt:::::::::::tt  ee:::::::::::::e   p::::::::::::::pp   s:::::::::::ss
- *  sssssssssss              ttttttttttt      eeeeeeeeeeeeee   p::::::pppppppp      sssssssssss
- *                                                             p:::::p
- *                                                             p:::::p
- *                                                            p:::::::p
- *                                                            p:::::::p
- *                                                            p:::::::p
- *                                                            ppppppppp
-
-.steps
-  +block
-
-  .steps-segment
-    position: relative
-
-    &:not(:last-child):after
-      // This will contain the horizontal or vertical divider
-      content: " "
-      display: block
-      position: absolute
-
-  +steps-vertical
-    .steps-segment
-      display: block
-
-      &:not(:last-child)
-        min-height: $steps-vertical-min-height
-
-    &.is-short
-      .steps-segment
-        flex-grow: 0
-
-        &:not(:last-child)
-          //this is commented because text would be running perpendicular to the line, so we won't need as much room
-          // min-height: $steps-horizontal-min-width
-
-    &.is-short.is-centered
-      justify-content: center
-
-    &.is-short.is-bottom
-      justify-content: flex-end
-
-    &:not(.is-short)
-      height: 100%
-      display: flex
-      flex-direction: column
-
-      .steps-segment:not(:last-child)
-        flex-grow: 1
-
-
-  +steps-horizontal
-    display: flex
-
-    .steps-segment:not(:last-child)
-      flex-basis: 1rem
-      flex-grow: 1
-      flex-shrink: 1
-
-    &.is-narrow
-      .steps-segment
-        flex-grow: 0
-
-        &:not(:last-child)
-          min-width: $steps-horizontal-min-width
-
-    &.is-narrow.is-centered
-      justify-content: center
-
-    &.is-narrow.is-right
-      justify-content: flex-end
-
-    &.has-content-centered
-      text-align: center
-
-    &.is-balanced, &.has-content-centered
-      .steps-segment:last-child
-        flex-basis: 1rem
-        flex-grow: 1
-        flex-shrink: 1
-
-    &.is-narrow.has-content-centered
-      .steps-segment:last-child
-        flex-grow: 0
-        min-width: $steps-horizontal-min-width
-
-    .steps-content.is-divider-content
-      text-align: center
-
-
-  // Marker style
-  .steps-marker
-    align-items: center
-    display: flex
-    border-radius: 50%
-    font-weight: $weight-bold
-    justify-content: center
-
-    // Position & z-index are needed to put it above the divider
-    position: relative
-    z-index: 5
-
 .steps
   +steps-size($size-normal)
 
@@ -336,26 +276,6 @@ $steps-thin-marker-size: 0.8em !default
 
 .steps.is-large
   +steps-size($size-large)
-
-/*
- *
- *                                                     dddddddd
- *                                                     d::::::d  iiii     ffffffffffffffff    iiii
- *                                                     d::::::d i::::i   f::::::::::::::::f  i::::i
- *                                                     d::::::d  iiii   f::::::::::::::::::f  iiii
- *                                                     d:::::d          f::::::fffffff:::::f
- *   mmmmmmm    mmmmmmm      ooooooooooo       ddddddddd:::::d iiiiiii  f:::::f       ffffffiiiiiii     eeeeeeeeeeee    rrrrr   rrrrrrrrr       ssssssssss
- * mm:::::::m  m:::::::mm  oo:::::::::::oo   dd::::::::::::::d i:::::i  f:::::f             i:::::i   ee::::::::::::ee  r::::rrr:::::::::r    ss::::::::::s
- *m::::::::::mm::::::::::mo:::::::::::::::o d::::::::::::::::d  i::::i f:::::::ffffff        i::::i  e::::::eeeee:::::eer:::::::::::::::::r ss:::::::::::::s
- *m::::::::::::::::::::::mo:::::ooooo:::::od:::::::ddddd:::::d  i::::i f::::::::::::f        i::::i e::::::e     e:::::err::::::rrrrr::::::rs::::::ssss:::::s
- *m:::::mmm::::::mmm:::::mo::::o     o::::od::::::d    d:::::d  i::::i f::::::::::::f        i::::i e:::::::eeeee::::::e r:::::r     r:::::r s:::::s  ssssss
- *m::::m   m::::m   m::::mo::::o     o::::od:::::d     d:::::d  i::::i f:::::::ffffff        i::::i e:::::::::::::::::e  r:::::r     rrrrrrr   s::::::s
- *m::::m   m::::m   m::::mo::::o     o::::od:::::d     d:::::d  i::::i  f:::::f              i::::i e::::::eeeeeeeeeee   r:::::r                  s::::::s
- *m::::m   m::::m   m::::mo::::o     o::::od:::::d     d:::::d  i::::i  f:::::f              i::::i e:::::::e            r:::::r            ssssss   s:::::s
- *m::::m   m::::m   m::::mo:::::ooooo:::::od::::::ddddd::::::ddi::::::if:::::::f            i::::::ie::::::::e           r:::::r            s:::::ssss::::::s
- *m::::m   m::::m   m::::mo:::::::::::::::o d:::::::::::::::::di::::::if:::::::f            i::::::i e::::::::eeeeeeee   r:::::r            s::::::::::::::s
- *m::::m   m::::m   m::::m oo:::::::::::oo   d:::::::::ddd::::di::::::if:::::::f            i::::::i  ee:::::::::::::e   r:::::r             s:::::::::::ss
- *mmmmmm   mmmmmm   mmmmmm   ooooooooooo      ddddddddd   dddddiiiiiiiifffffffff            iiiiiiii    eeeeeeeeeeeeee   rrrrrrr              sssssssssss
 
 // Divider Default Colors
 .steps-segment
@@ -526,27 +446,3 @@ $steps-thin-marker-size: 0.8em !default
       padding-top: 0
       display: flex
       flex-direction: column-reverse
-
-//.has-hover-card
-
-.steps:not(.is-vertical)
-  &.has-content-centered
-    .card
-      .card-header
-        justify-content: center
-
-  &.has-hover-card, .has-hover-card
-    .steps-content .card
-      position: absolute
-      z-index: 1
-
-    .show-on-hover
-      opacity: 0
-
-  .steps-marker, .steps-content .card
-    cursor: pointer
-
-    &:hover ~ .steps-content > .card
-      opacity: 1
-
-//

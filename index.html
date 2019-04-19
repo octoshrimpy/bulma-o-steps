@@ -577,7 +577,7 @@ variables:
             and will take up space.
         </p>
         <p>
-            the structure of card is very similar to
+            the structure of card is very similar to bulma's own card setup.
         </p>
     </div>
 
@@ -585,10 +585,17 @@ variables:
     <ul class="steps has-content-centered has-hover-card">
         <li class="steps-segment">
             <span class="steps-marker"></span>
-            <div class="steps-content card">
-                <p class="is-size-4 card-header">Step 1</p>
-                <div class="card-content">
-                    this entire card is hidden to start.
+            <div class="steps-content">
+                <div class="card show-on-hover">
+                    <p class="is-size-4 card-header">Step 1</p>
+                    <div class="card-content">
+                        this entire card is hidden to start.
+                    </div>
+                    <footer class="card-footer">
+                        <div class="card-footer-item">
+                            this is a footer
+                        </div>
+                    </footer>
                 </div>
             </div>
         </li>
