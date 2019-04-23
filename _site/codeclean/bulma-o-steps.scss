@@ -27,7 +27,7 @@ $steps-divider-height: 0.33rem !default;
     .steps-segment {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         position: relative;
         align-items: flex-end;
 
@@ -45,6 +45,7 @@ $steps-divider-height: 0.33rem !default;
                 position: absolute;
                 width: calc(100% - #{$steps-marker-size});
                 right: $steps-marker-size;
+                top: ($steps-marker-size / 2) - ($steps-divider-height / 2);
                 background: $steps-default-background;
                 z-index: 1;
             }
@@ -70,7 +71,6 @@ $steps-divider-height: 0.33rem !default;
             z-index: 2;
 
 
-
             //colors
             background: $steps-default-background;
 
@@ -79,6 +79,23 @@ $steps-divider-height: 0.33rem !default;
             height: $steps-marker-size;
             width: $steps-marker-size;
             font-size: $steps-marker-size * 0.45;
+        }
+
+        .steps-content {
+            display: flex;
+            flex-direction: column;
+
+            .steps-title {
+                font-size: 1.2em;
+            }
+
+            .steps-description {
+                font-size: 0.9em;
+            }
+
+            .steps-footer {
+
+            }
         }
     }
 }
@@ -96,10 +113,9 @@ $steps-divider-height: 0.33rem !default;
 
 // is-centered
 // is-balanced
-// is-thin
 // is-small
 // is-medium
 // is-thick
 // is-vertical
 // is-short
-// is-
+// is-narrow

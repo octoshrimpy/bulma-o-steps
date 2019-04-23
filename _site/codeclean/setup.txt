@@ -1,0 +1,16 @@
+structure:
+    steps
+        steps-segment
+            steps-marker
+                marker-content
+            steps-content
+                steps-title
+                steps-description
+                steps-footer
+
+hollow:
+    steps.is-hollow
+    steps-segment.is-hollow
+
+thin:
+    steps.is-thin
