@@ -29,22 +29,22 @@ $steps-divider-height: 0.33rem !default;
         flex-direction: column;
         justify-content: flex-start;
         position: relative;
-        align-items: flex-end;
+        flex-basis: 0;
 
         // keeps the last element to the right
-        &:not(:first-child) {
+        &:not(:last-child) {
             flex-grow: 1;
         }
 
         // divider
-        &:not(:first-child) {
+        &:not(:last-child) {
 
             &:after {
                 content: '';
                 height: $steps-divider-height;
                 position: absolute;
                 width: calc(100% - #{$steps-marker-size});
-                right: $steps-marker-size;
+                left: $steps-marker-size;
                 top: ($steps-marker-size / 2) - ($steps-divider-height / 2);
                 background: $steps-default-background;
                 z-index: 1;
@@ -53,7 +53,8 @@ $steps-divider-height: 0.33rem !default;
 
         &.is-completed {
 
-            .steps-marker {
+            .steps-marker,
+            & + .steps-segment .steps-marker {
                 background: $steps-completed-background;
                 color: $steps-completed-text;
             }
@@ -94,7 +95,11 @@ $steps-divider-height: 0.33rem !default;
             }
 
             .steps-footer {
+                display: flex;
 
+                .steps-footer-item {
+                    flex-grow: 1;
+                }
             }
         }
     }
