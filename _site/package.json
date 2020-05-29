@@ -2,7 +2,7 @@
   "name": "bulma-o-steps",
   "version": "1.1.0",
   "description": "In-depth Steps component for Bulma.io",
-  "main": "bulma-o-steps.sass",
+  "main": "index.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
