@@ -4,3 +4,5 @@ node_modules
 bulma-o-steps*.tgz
 npm-debug.log
 bulma-steps.scss
+
+.jekyll-cache/
