@@ -296,6 +296,8 @@
   .steps:not(.is-vertical).has-content-centered .steps-segment:not(:last-child):after {
     left: 50%;
     right: -50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .steps:not(.is-vertical).has-content-centered .steps-marker {
     position: absolute;
