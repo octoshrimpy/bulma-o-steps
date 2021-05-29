@@ -1,3 +1,8 @@
+# ⚠️ LOOKING FOR MAINTAINERS ⚠️
+
+_feel free to open an issue or discussion about it!_
+
+
 # Steps component for Bulma
 
 This is an extension for the [Bulma CSS Framework](http://bulma.io).  
