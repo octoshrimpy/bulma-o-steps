@@ -4,7 +4,8 @@
   "description": "In-depth Steps component for Bulma.io",
   "main": "index.sass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass bulma-steps.sass"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,6 @@
     "bulma": "^0.8.2"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "sass": "^1.55.0"
   }
 }
